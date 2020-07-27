@@ -1,0 +1,36 @@
+/* --------------------------------------------
+$  FOOTER
+ --------------------------------------------*/
+.footer {
+    .footer__hero {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 530px;
+        width: 100vw;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        z-index: -1;
+        transform: translateY(-280px);
+    }
+
+    nav {
+        .footer__items {
+            .footer__item--link {
+                text-decoration: none;
+                color: colour(white);
+            }
+        }
+    }
+}
+
+.social--music__icon {
+    height: 40px;
+}
+
+.social__icon {
+    fill: white;
+}

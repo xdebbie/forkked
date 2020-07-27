@@ -1,0 +1,175 @@
+@mixin vroom-pickup-truck() {
+  // 1. Correct the line height in all browsers.
+  // 2. Set default font-size to 62.5% to make sure 1 rem = 10px
+  html {
+    line-height: 1.15; // 1
+    font-size: $global-font-size; // 2
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+  *:focus {
+    outline: none;
+  }
+
+  body {
+    background: $body-background;
+    font-size: $body-font-size;
+    font-family: $body-font-family;
+    font-weight: $global-font-weight-normal;
+    color: $body-font-color;
+
+    @if ($body-font-antialiased) {
+      -webkit-font-smoothing: antialiased; // sass-lint:disable-line no-vendor-prefixes
+      -moz-osx-font-smoothing: grayscale; // sass-lint:disable-line no-vendor-prefixes
+    }
+  }
+
+  @for $i from 1 through 6 {
+    %h#{$i} {
+      font: {
+        family: $header-font-family;
+        style: $header-font-style;
+        weight: $header-font-weight;
+      }
+
+      color: $header-font-color;
+      text-rendering: $header-text-rendering;
+    }
+  }
+
+  // Heading styles
+  @each $header-bp, $header-def in $header-styles {
+    @include breakpoint($header-bp) {
+      @each $header, $styles in $header-def {
+        %#{$header} {
+          @each $style, $value in $styles {
+            #{$style}: #{$value};
+          }
+        }
+      }
+    }
+  }
+
+  @for $i from 1 through 6 {
+    h#{$i} {
+      @extend %h#{$i};
+    }
+
+    @if $header-classes {
+      .h#{$i} {
+        @extend %h#{$i};
+      }
+    }
+  }
+
+  // Text-level semantics
+  // ==========================================================================
+
+  a {
+    // Remove the gray background on active links in IE 10.
+    background-color: transparent;
+
+    line-height: inherit;
+    color: $links-color;
+    text-decoration: $links-text-decoration;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $links-color-hover;
+
+      @if $links-text-decoration-hover !=$links-text-decoration {
+        text-decoration: $links-text-decoration-hover;
+      }
+    }
+
+    img {
+      border: 0;
+    }
+  }
+
+  %p {
+    font-size: inherit;
+    text-rendering: $paragraph-text-rendering;
+  }
+
+  p {
+    @each $paragraph-bp, $styles in $paragraph-styles {
+      @include breakpoint($paragraph-bp) {
+        @extend %p;
+
+        @each $style, $value in $styles {
+          #{$style}: #{$value};
+        }
+      }
+    }
+  }
+
+  %ul,
+  ol {
+    @each $lists-bp, $styles in $list-styles {
+      @include breakpoint($lists-bp) {
+        @each $style, $value in $styles {
+          #{$style}: #{$value};
+        }
+      }
+    }
+  }
+
+  ul {
+    @extend %ul;
+    list-style-type: $list-style-type;
+  }
+
+  li {
+    font-size: inherit;
+  }
+
+  ul,
+  ol {
+    & & {
+      margin-left: $list-nested-side-margin;
+      margin-bottom: 0;
+    }
+  }
+
+  // 1. Add the correct font weight in Chrome, Edge, and Safari.
+  b,
+  strong {
+    font-weight: $global-font-weight-bold; // 1
+    line-height: inherit;
+  }
+
+  // Add the correct font size in all browsers.
+  small {
+    font-size: $small-font-size;
+    line-height: inherit;
+  }
+
+  blockquote {
+    @each $quote-bp, $styles in $blockquote-styles {
+      @include breakpoint($quote-bp) {
+        @each $style, $value in $styles {
+          #{$style}: #{$value};
+        }
+      }
+    }
+  }
+
+  // Embedded content
+  // ==========================================================================
+
+  // Remove the border on images inside links in IE 10.
+  img {
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+  }
+}

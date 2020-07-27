@@ -1,0 +1,18 @@
+/* --------------------------------------------
+$  FUNCTIONS
+ --------------------------------------------*/
+
+/// COLOUR MAP
+$colours: (
+    /**/ white: rgb(255, 255, 255),
+    cod-gray: rgb(10, 10, 10),
+    shiraz: rgba(253, 49, 141, 1),
+    lonestar-light: lighten(rgb(117, 0, 1), 5%),
+    lonestar-dark: darken(rgb(117, 0, 1), 5%),
+    lonestar-darker: darken(rgb(117, 0, 1), 11%),
+    apricot: rgb(255, 204, 178)
+);
+
+@function colour($colour-name) {
+    @return map-get($colours, $colour-name);
+}

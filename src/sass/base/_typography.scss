@@ -1,0 +1,73 @@
+/* --------------------------------------------
+$  TYPOGRAPHY
+ --------------------------------------------*/
+/* --------------------------------------------
+$  FONT-FAMILY 
+ --------------------------------------------*/
+$fonts: (
+    headline: (
+        'Tiempos Headline',
+        serif
+    ),
+    praktikal: (
+        'TG Praktikal',
+        monospace
+    ),
+    myriad: (
+        'Myriad Pro',
+        sans-serif
+    ),
+    meta: (
+        'Meta Serif Pro',
+        serif
+    ),
+    geogrotesque: (
+        'Geogrotesque',
+        sans-serif
+    )
+);
+
+@function font($font-name) {
+    @return map-get($fonts, $font-name);
+}
+
+/* --------------------------------------------
+$  FONT-SIZE 
+ --------------------------------------------*/
+$font-sizes: (
+    nav-logo: 30px,
+    title-featured: 42px,
+    title-article: 36px,
+    title-card: 22px,
+    subtitle-featured: 18px,
+    nav-link: 16px,
+    button: 14px
+);
+
+@function font-size($font-size-name) {
+    @return map-get($font-sizes, $font-size-name);
+}
+
+/* --------------------------------------------
+$  LINE-HEIGHT 
+ --------------------------------------------*/
+$line-heights: (
+    title-featured: 60px,
+    title-article: 42px,
+    title-card: 28px,
+    subtitle-featured: 25px,
+    subject: 20px
+);
+
+@function line-height($line-height-name) {
+    @return map-get($line-heights, $line-height-name);
+}
+
+// article title
+h2 {
+    font-family: font(headline);
+    font-size: font-size(title-article);
+    font-weight: normal;
+    line-height: line-height(title-article);
+    color: colour(cod-gray);
+}

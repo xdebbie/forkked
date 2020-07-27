@@ -1,0 +1,31 @@
+/* --------------------------------------------
+$  BUTTON
+ --------------------------------------------*/
+.btn__med,
+.btn__more {
+    background-color: colour(cod-gray);
+    border-radius: 5px;
+    border: none;
+    color: colour(white);
+    cursor: pointer;
+    font-family: font(myriad);
+    font-size: font-size(button);
+    font-weight: normal;
+    height: 38px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 106px;
+
+    &:hover {
+        filter: brightness(50%);
+    }
+}
+
+.btn__more {
+    display: block;
+    font-size: font-size(subtitle-featured);
+    line-height: 38px;
+    margin: 30px auto 85px auto;
+    text-align: center;
+    width: 136px;
+}

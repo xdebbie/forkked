@@ -1,0 +1,62 @@
+/* --------------------------------------------
+$  NAV (header)
+ --------------------------------------------*/
+
+nav {
+    font-family: font(praktikal);
+    text-transform: lowercase;
+    font-weight: normal;
+    text-decoration: none;
+    color: colour(white);
+    transform: translateY(80px);
+    margin: -80px auto 0 auto;
+    width: 1000px;
+
+    .nav__items {
+        background-color: transparent;
+        border: none;
+        height: 40px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        /* logo */
+        .nav__item--left {
+            text-decoration: none;
+            color: colour(white);
+            margin-right: auto;
+            position: relative;
+
+            .nav__item--logo {
+                height: 45px;
+                transform: scaleX(-1);
+            }
+
+            span {
+                font-size: font-size(nav-logo);
+                position: absolute;
+                top: 8px;
+                margin-left: 6px;
+            }
+        }
+
+        /* nav menu items */
+        .nav__item--link {
+            font-size: font-size(nav-link);
+            font-weight: normal;
+            color: colour(white);
+            text-decoration: none;
+            transition: all 0.3s ease 0;
+            margin-left: 25px;
+
+            &:hover {
+                color: colour(shiraz);
+            }
+
+            &:active  {
+                color: colour(shiraz);
+            }
+        }
+    }
+}
