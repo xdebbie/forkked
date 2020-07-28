@@ -3,55 +3,67 @@ $  NAV (header)
  --------------------------------------------*/
 
 nav {
-    font-family: font(praktikal);
-    text-transform: lowercase;
-    font-weight: normal;
-    text-decoration: none;
     color: colour(white);
-    transform: translateY(80px);
+    font-family: font(praktikal);
+    font-weight: normal;
     margin: -80px auto 0 auto;
+    text-decoration: none;
+    text-transform: lowercase;
+    transform: translateY(80px);
     width: 1000px;
 
     .nav__items {
+        align-items: center;
         background-color: transparent;
         border: none;
-        height: 40px;
-        margin-top: 40px;
         display: flex;
+        height: 40px;
         justify-content: flex-end;
-        align-items: center;
+        margin-top: 40px;
 
         /* logo */
         .nav__item--left {
-            text-decoration: none;
             color: colour(white);
             margin-right: auto;
             position: relative;
+            text-decoration: none;
+
+            &:hover .nav__item--logo {
+                transform: scale(1.02);
+                transition: all 0.3s ease;
+            }
+
+            &:hover span {
+                transform: scale(1.1);
+                transition: all 0.3s ease;
+            }
 
             .nav__item--logo {
                 height: 45px;
                 transform: scaleX(-1);
+                transition: all 0.3s ease;
             }
 
             span {
                 font-size: font-size(nav-logo);
+                margin-left: 6px;
                 position: absolute;
                 top: 8px;
-                margin-left: 6px;
+                transition: all 0.3s ease;
             }
         }
 
         /* nav menu items */
         .nav__item--link {
+            color: colour(white);
             font-size: font-size(nav-link);
             font-weight: normal;
-            color: colour(white);
-            text-decoration: none;
-            transition: all 0.3s ease 0;
             margin-left: 25px;
+            text-decoration: none;
+            transition: all 0.3s ease;
 
             &:hover {
-                color: colour(shiraz);
+                text-shadow: 3px 3px 12px colour(white);
             }
 
             &:active  {

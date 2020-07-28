@@ -4,8 +4,9 @@ $  FUNCTIONS
 
 /// COLOUR MAP
 $colours: (
-    /**/ white: rgb(255, 255, 255),
+    white: rgb(255, 255, 255),
     cod-gray: rgb(10, 10, 10),
+    cod-gray-tr: rgba(10, 10, 10, 0.5),
     shiraz: rgba(253, 49, 141, 1),
     lonestar-light: lighten(rgb(117, 0, 1), 5%),
     lonestar-dark: darken(rgb(117, 0, 1), 5%),

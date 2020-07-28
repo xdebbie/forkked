@@ -6,7 +6,7 @@ $  FOOTER
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        height: 530px;
+        height: 670px;
         width: 100vw;
         position: absolute;
         left: 50%;
@@ -14,23 +14,95 @@ $  FOOTER
         margin-left: -50vw;
         margin-right: -50vw;
         z-index: -1;
-        transform: translateY(-280px);
+        transform: translateY(-440px);
     }
 
     nav {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100vw;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        height: 210px;
+        transform: translateY(100px);
+        background: linear-gradient(
+            to bottom,
+            rgba(10, 10, 10, 0.3) 0%,
+            rgba(10, 10, 10, 0.4) 50%,
+            rgba(10, 10, 10, 0.7) 100%
+        );
+
         .footer__items {
+            display: flex;
+            justify-content: center;
+            margin: 40px auto 10px auto;
+
             .footer__item--link {
-                text-decoration: none;
                 color: colour(white);
+                font-family: font(myriad);
+                margin-right: 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: colour(cod-gray-tr);
+                    transition: all 0.3s ease;
+                }
             }
         }
+
+        .social__icons {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto 10px auto;
+
+            .social__icon--link {
+                margin-right: 10px;
+
+                .social__icon {
+                    height: 35px;
+                    stroke: white;
+                    transition: all 0.3s ease;
+                    width: 35px;
+
+                    &:hover {
+                        stroke: colour(cod-gray-tr);
+                        transform: scale(1.2);
+                        transition: all 0.3s ease;
+                    }
+                }
+
+                .social--music__icon {
+                    fill: white;
+                    height: 35px;
+                    stroke: white;
+                    transition: all 0.3s ease;
+                    width: 35px;
+
+                    &:hover {
+                        fill: colour(cod-gray-tr);
+                        stroke: colour(cod-gray-tr);
+                        transform: scale(1.2);
+                        transition: all 0.3s ease;
+                    }
+                }
+            }
+        }
+
+        .disclaimer {
+            font-family: font(myriad);
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 18px;
+            margin: 0 auto 30px auto;
+            max-width: 1000px;
+            text-align: center;
+            text-transform: none;
+        }
     }
-}
-
-.social--music__icon {
-    height: 40px;
-}
-
-.social__icon {
-    fill: white;
 }

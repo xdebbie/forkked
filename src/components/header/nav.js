@@ -5,17 +5,13 @@ $  NAV (HEADER)
 import React from 'react'
 import { Link } from 'gatsby'
 import { window } from 'browser-monads'
-import logo from '../../images/logo.svg'
+import Logo from '../../assets/logo.svg'
 
 const Nav = () => (
     <nav>
         <div className="nav__items">
             <a className="nav__item--left" href="/">
-                <img
-                    src={logo}
-                    alt="forkked logo"
-                    className="nav__item--logo"
-                />
+                <Logo className="nav__item--logo" />
                 <span>Forkked</span>
             </a>
             <Link

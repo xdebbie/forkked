@@ -17,7 +17,13 @@ $  BUTTON
     width: 106px;
 
     &:hover {
-        filter: brightness(50%);
+        background-color: rgb(110, 17, 51);
+        box-shadow: 3px 3px 2px 2px rgba($color: white, $alpha: 0.7);
+    }
+
+    &:active {
+        transform: translateY(4px);
+        box-shadow: 1px 1px 1px 1px rgba($color: white, $alpha: 0.7);
     }
 }
 

@@ -4,12 +4,12 @@ $  FOOTER
 import React from 'react'
 import { Link } from 'gatsby'
 import footer from '../../images/galaxy.png'
-import facebook from '../../images/facebook.svg'
-import instagram from '../../images/instagram.svg'
-import twitter from '../../images/twitter.svg'
-import apple_small from '../../images/applemusic-small.svg'
-import tidal_small from '../../images/tidal-small.svg'
-import spotify_small from '../../images/spotify-small.svg'
+import Facebook from '../../assets/facebook.svg'
+import Instagram from '../../assets/instagram.svg'
+import Twitter from '../../assets/twitter.svg'
+import AppleSM from '../../assets/applemusic-small.svg'
+import TidalSM from '../../assets/tidal-small.svg'
+import SpotifySM from '../../assets/spotify-small.svg'
 
 const Footer = () => {
     return (
@@ -43,46 +43,22 @@ const Footer = () => {
                 </div>
                 <div className="social__icons">
                     <a className="social__icon--link" href="/">
-                        <img
-                            src={facebook}
-                            alt="facebook - forkked"
-                            className="social__icon"
-                        />
+                        <Facebook className="social__icon" />
                     </a>
                     <a className="social__icon--link" href="/">
-                        <img
-                            src={instagram}
-                            alt="instagram - forkked"
-                            className="social__icon"
-                        />
+                        <Instagram className="social__icon" />
                     </a>
                     <a className="social__icon--link" href="/">
-                        <img
-                            src={twitter}
-                            alt="twitter - forkked"
-                            className="social__icon"
-                        />
+                        <Twitter className="social__icon" />
                     </a>
                     <a className="social__icon--link" href="/">
-                        <img
-                            src={apple_small}
-                            alt="apple music - forkked"
-                            className="social--music__icon"
-                        />
+                        <AppleSM className="social--music__icon" />
                     </a>
                     <a className="social__icon--link" href="/">
-                        <img
-                            src={tidal_small}
-                            alt="tidal - forkked"
-                            className="social--music__icon"
-                        />
+                        <TidalSM className="social--music__icon" />
                     </a>
                     <a className="social__icon--link" href="/">
-                        <img
-                            src={spotify_small}
-                            alt="spotify - forkked"
-                            className="social--music__icon"
-                        />
+                        <SpotifySM className="social--music__icon" />
                     </a>
                 </div>
                 <div className="disclaimer">
