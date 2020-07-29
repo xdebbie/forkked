@@ -3,7 +3,8 @@ $  BUTTON
  --------------------------------------------*/
 .btn__med,
 .btn__more {
-    background-color: colour(cod-gray);
+    background: colour(cod-gray);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     border: none;
     color: colour(white);
@@ -12,18 +13,30 @@ $  BUTTON
     font-size: font-size(button);
     font-weight: normal;
     height: 38px;
+    height: 38px;
+    outline: none;
     text-decoration: none;
     transition: all 0.3s ease;
+    user-select: none;
     width: 106px;
 
     &:hover {
-        background-color: rgb(110, 17, 51);
-        box-shadow: 3px 3px 2px 2px rgba($color: white, $alpha: 0.7);
+        background: linear-gradient(
+            222deg,
+            colour(siren),
+            colour(shiraz),
+            colour(radical),
+            colour(pastel),
+            colour(apricot)
+        );
+        animation: gradient 3s ease infinite;
+        background-size: 600% 600%;
+        box-shadow: 3px 3px 2px 2px rgba($color: white, $alpha: 0.6);
     }
 
     &:active {
+        box-shadow: 2px 2px 1px 1px rgba($color: white, $alpha: 0.3);
         transform: translateY(4px);
-        box-shadow: 1px 1px 1px 1px rgba($color: white, $alpha: 0.7);
     }
 }
 
@@ -34,4 +47,23 @@ $  BUTTON
     margin: 30px auto 85px auto;
     text-align: center;
     width: 136px;
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+// Create Keyframes
+@include keyframes(gradient) {
+    0% {
+        background-position: 0% 51%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 51%;
+    }
 }
