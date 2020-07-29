@@ -10,11 +10,15 @@ $colours: (
     lonestar-light: lighten(rgb(117, 0, 1), 5%),
     lonestar-dark: darken(rgb(117, 0, 1), 5%),
     lonestar-darker: darken(rgb(117, 0, 1), 11%),
-    apricot: rgb(255, 204, 178),
-    siren: rgb(129, 4, 52),
+    // gradient animation
+        apricot: rgb(255, 204, 178),
     shiraz: rgb(167, 0, 60),
     radical: rgb(255, 67, 102),
-    pastel: rgb(255, 112, 104)
+    pastel: rgb(255, 112, 104),
+    // text gradient animation
+        orange: rgb(255, 70, 0),
+    chrome: rgb(255, 167, 0),
+    turquoise: rgb(45, 226, 230)
 );
 
 @function colour($colour-name) {

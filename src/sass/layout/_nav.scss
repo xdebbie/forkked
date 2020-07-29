@@ -29,15 +29,21 @@ nav {
             text-decoration: none;
 
             &:hover .nav__item--logo {
+                stroke: url(#svg-gradient-hover);
                 transform: scale(1.02);
                 transition: all 0.3s ease;
             }
 
             &:hover span {
-                background-image: linear-gradient(92deg, #f35626, #feab3a);
+                background-image: linear-gradient(
+                    45deg,
+                    colour(turquoise),
+                    colour(chrome)
+                );
                 background-clip: text;
                 -webkit-text-fill-color: transparent;
-                animation: texthue 4s infinite linear;
+                // calling the keyframe "hue" from _mixins.scss
+                animation: hue 6s infinite linear;
                 transform: scale(1.1);
                 transition: all 0.3s ease;
             }
@@ -67,7 +73,15 @@ nav {
             transition: all 0.3s ease;
 
             &:hover {
-                text-shadow: 3px 3px 12px colour(white);
+                background-image: linear-gradient(
+                    92deg,
+                    colour(turquoise),
+                    colour(chrome)
+                );
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: hue 2.5s infinite linear;
+                transform: scale(1.1);
             }
 
             &:active  {

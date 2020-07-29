@@ -1,6 +1,7 @@
 /* --------------------------------------------
 $  MIXINS
  --------------------------------------------*/
+
 // button gradient animation
 @mixin keyframes($name) {
     @keyframes #{$name} {
@@ -29,7 +30,7 @@ $  MIXINS
 }
 
 // Create Keyframes
-@include keyframes(texthue) {
+@include keyframes(hue) {
     from {
         -webkit-filter: hue-rotate(0deg);
     }
