@@ -5,11 +5,10 @@ $  FUNCTIONS
 /* COLOUR MAP */
 $colours: (
     white: rgb(255, 255, 255),
+    black: rgb(0, 0, 0),
     cod-gray: rgb(10, 10, 10),
     cod-gray-tr: rgba(10, 10, 10, 0.5),
-    lonestar-light: lighten(rgb(117, 0, 1), 5%),
-    lonestar-dark: darken(rgb(117, 0, 1), 5%),
-    lonestar-darker: darken(rgb(117, 0, 1), 11%),
+    sazerac: rgb(255, 241, 227),
     // gradient animation
         apricot: rgb(255, 204, 178),
     shiraz: rgb(167, 0, 60),

@@ -18,6 +18,7 @@
     "gatsby-plugin-sass": "^2.3.12",
     "gatsby-plugin-sharp": "^2.6.21",
     "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-remark-embed-video": "^3.0.10",
     "gatsby-source-contentful": "^2.3.30",
     "gatsby-source-filesystem": "^2.3.21",
     "gatsby-transformer-remark": "^2.8.27",

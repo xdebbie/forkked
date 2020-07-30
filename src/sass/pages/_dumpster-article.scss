@@ -1,0 +1,112 @@
+/* --------------------------------------------
+$  DUMPSTER (ARTICLE PAGE)
+ --------------------------------------------*/
+.dumpster__header {
+    .dumpster__hero {
+        background-position: 50% 35%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 460px;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: absolute;
+        right: 50%;
+        width: 100vw;
+        z-index: -1;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(
+                to bottom,
+                rgba(10, 10, 10, 1) 0%,
+                rgba(10, 10, 10, 0.8) 20%,
+                rgba(10, 10, 10, 0) 100%
+            );
+        }
+    }
+    .dumpster__info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 460px;
+
+        .dumpster__banner {
+            color: colour(white);
+            font-family: font(praktikal);
+            font-size: font-size(banner-text);
+            font-weight: normal;
+            max-width: 664px;
+            text-align: center;
+            text-shadow: 5px 5px 15px black;
+        }
+    }
+}
+
+.dumpster__wrapper {
+    width: 100vw;
+    background-color: colour(sazerac);
+    left: 50%;
+    right: 50%;
+    position: absolute;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    .dumpster__content {
+        max-width: 840px;
+        margin: 60px auto;
+
+        p {
+            font-family: font(meta);
+            font-size: font-size(ptext);
+            line-height: line-height(article);
+            font-weight: normal;
+            margin: 35px 0;
+            color: colour(black);
+            text-align: justify;
+        }
+
+        figcaption {
+            font-family: font(myriad);
+            font-size: font-size(nav-link);
+            line-height: line-height(article);
+            font-weight: normal;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        // first letter of the text block
+        .capital {
+            font-size: font-size(title-featured);
+        }
+
+        // italic elements
+        .emphasis {
+            font-style: italic;
+        }
+
+        figure {
+            max-width: 800px;
+            margin: 0 auto;
+
+            img {
+                align-self: center;
+                max-width: 800px;
+                border-radius: 5px;
+                margin: 20px auto 0 auto;
+            }
+        }
+
+        .embedVideo-container {
+            margin: 50px auto 5px auto;
+            width: 800px;
+            align-self: center;
+        }
+    }
+}

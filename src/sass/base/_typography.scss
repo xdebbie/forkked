@@ -19,6 +19,7 @@ $fonts: (
     ),
     meta: (
         'Meta Serif Pro',
+        Georgia,
         serif
     ),
     geogrotesque: (
@@ -39,6 +40,8 @@ $font-sizes: (
     title-featured: 42px,
     title-article: 36px,
     title-card: 22px,
+    banner-text: 48px,
+    ptext: 20px,
     subtitle-featured: 18px,
     nav-link: 16px,
     button: 14px
@@ -55,6 +58,7 @@ $line-heights: (
     title-featured: 60px,
     title-article: 42px,
     title-card: 28px,
+    article: 32px,
     subtitle-featured: 25px,
     subject: 20px
 );

@@ -24,8 +24,8 @@ const DumpsterTemplate = props => {
                     }}
                 ></div>
                 <div className="dumpster__info">
-                    <h1 className="dumpster__title">
-                        {props.data.contentfulBlog.title}
+                    <h1 className="dumpster__banner">
+                        {props.data.contentfulBlog.bannerText}
                     </h1>
                 </div>
             </div>
@@ -49,6 +49,7 @@ export const query = graphql`
     query DumpsterTemplate($id: String!) {
         contentfulBlog(id: { eq: $id }) {
             title
+            bannerText
             id
             slug
             content {

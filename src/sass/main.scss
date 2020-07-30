@@ -19,8 +19,7 @@ $  3. BASE STUFF
 /* ---------------------------
 $  4. LAYOUT
  ----------------------------*/
-@import 'layout/footer', 'layout/grid', 'layout/nav', 'layout/home/cards',
-    'layout/home/featured';
+@import 'layout/footer', 'layout/grid', 'layout/nav';
 
 /* ---------------------------
 $  5. COMPONENTS
@@ -30,7 +29,7 @@ $  5. COMPONENTS
 /* ---------------------------
 $  6. PAGES
  ----------------------------*/
-@import 'pages/home';
+@import 'pages/home/cards', 'pages/home/featured', 'pages/dumpster-article';
 
 /* ---------------------------
 $  7. ICONS
