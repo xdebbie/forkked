@@ -83,10 +83,17 @@ nav {
                 animation: hue 2.5s infinite linear;
                 transform: scale(1.1);
             }
+        }
 
-            &:active  {
-                color: colour(shiraz);
-            }
+        .active {
+            background-image: linear-gradient(
+                92deg,
+                colour(turquoise),
+                rgb(255, 85, 196),
+                colour(chrome)
+            );
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
 }
