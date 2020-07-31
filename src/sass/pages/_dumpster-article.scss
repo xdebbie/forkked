@@ -6,7 +6,7 @@ $  DUMPSTER (ARTICLE PAGE)
         background-position: 50% 35%;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 460px;
+        height: 46em;
         left: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
@@ -35,41 +35,40 @@ $  DUMPSTER (ARTICLE PAGE)
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 460px;
+        min-height: 46em;
 
         .dumpster__banner {
             color: colour(white);
             font-family: font(praktikal);
             font-size: font-size(banner-text);
             font-weight: normal;
-            max-width: 664px;
+            max-width: 66.4rem;
             text-align: center;
-            text-shadow: 5px 5px 15px black;
+            text-shadow: 0.5rem 0.5rem 1.5rem black;
         }
     }
 }
 
 .dumpster__wrapper {
-    width: 100vw;
     background-color: colour(sazerac);
     left: 50%;
-    right: 50%;
-    position: absolute;
     margin-left: -50vw;
     margin-right: -50vw;
+    position: absolute;
+    right: 50%;
+    width: 100vw;
 
     .dumpster__content {
-        max-width: 840px;
-        margin: 60px auto;
+        margin: 6rem auto;
+        max-width: 84em;
 
         p {
+            color: colour(black);
             font-family: font(meta);
             font-size: font-size(ptext);
-            line-height: line-height(article);
             font-weight: normal;
-            margin: 35px 0;
-            color: colour(black);
-            text-align: justify;
+            line-height: line-height(article);
+            margin: 3.5rem 0;
         }
 
         figcaption {
@@ -77,7 +76,7 @@ $  DUMPSTER (ARTICLE PAGE)
             font-size: font-size(nav-link);
             line-height: line-height(article);
             font-weight: normal;
-            max-width: 800px;
+            max-width: 80rem;
             margin: 0 auto;
         }
 
@@ -92,21 +91,21 @@ $  DUMPSTER (ARTICLE PAGE)
         }
 
         figure {
-            max-width: 800px;
             margin: 0 auto;
+            max-width: 664px;
 
             img {
                 align-self: center;
-                max-width: 800px;
-                border-radius: 5px;
-                margin: 20px auto 0 auto;
+                border-radius: 0.5rem;
+                margin: 2rem auto 0 auto;
+                max-width: 664px;
             }
         }
 
         .embedVideo-container {
-            margin: 50px auto 5px auto;
-            width: 800px;
             align-self: center;
+            margin: 5rem auto 0.5rem auto;
+            width: 80em;
         }
     }
 }

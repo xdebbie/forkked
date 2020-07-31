@@ -2,6 +2,15 @@
 $  TYPOGRAPHY
  --------------------------------------------*/
 /* --------------------------------------------
+$  A note on px, em and rem
+$  -> PX are used in this project only for images,
+$  that will have a static size no matter what;
+$  -> REM are used for all typography (font-size,
+$  line-height, margin, padding);
+$  -> EM are used for all media queries, layout-
+$  related components, etc.
+ --------------------------------------------*/
+/* --------------------------------------------
 $  FONT-FAMILY 
  --------------------------------------------*/
 $fonts: (
@@ -36,15 +45,16 @@ $fonts: (
 $  FONT-SIZE 
  --------------------------------------------*/
 $font-sizes: (
-    nav-logo: 30px,
-    title-featured: 42px,
-    title-article: 36px,
-    title-card: 22px,
-    banner-text: 48px,
-    ptext: 20px,
-    subtitle-featured: 18px,
-    nav-link: 16px,
-    button: 14px
+    nav-logo: 3rem,
+    title-featured: 4.2rem,
+    title-article: 3.6rem,
+    title-card: 2.2rem,
+    banner-text: 4.8rem,
+    ptext: 2rem,
+    subtitle-featured: 1.8rem,
+    nav-link: 1.6rem,
+    footer: 1.5rem,
+    button: 1.4rem
 );
 
 @function font-size($font-size-name) {
@@ -55,23 +65,15 @@ $font-sizes: (
 $  LINE-HEIGHT 
  --------------------------------------------*/
 $line-heights: (
-    title-featured: 60px,
-    title-article: 42px,
-    title-card: 28px,
-    article: 32px,
-    subtitle-featured: 25px,
-    subject: 20px
+    title-featured: 6rem,
+    title-article: 4.2rem,
+    title-card: 2.8rem,
+    article: 3.2rem,
+    subtitle-featured: 2.5rem,
+    subject: 2rem,
+    footer: 1.8rem
 );
 
 @function line-height($line-height-name) {
     @return map-get($line-heights, $line-height-name);
-}
-
-// article title
-h2 {
-    font-family: font(headline);
-    font-size: font-size(title-article);
-    font-weight: normal;
-    line-height: line-height(title-article);
-    color: colour(cod-gray);
 }

@@ -6,20 +6,20 @@ nav {
     color: colour(white);
     font-family: font(praktikal);
     font-weight: normal;
-    margin: -80px auto 0 auto;
+    margin: -8rem auto 0 auto;
     text-decoration: none;
     text-transform: lowercase;
-    transform: translateY(80px);
-    width: 1000px;
+    transform: translateY(8em);
+    width: 100em;
 
     .nav__items {
         align-items: center;
         background-color: transparent;
         border: none;
         display: flex;
-        height: 40px;
+        height: 4rem;
         justify-content: flex-end;
-        margin-top: 40px;
+        margin-top: 4rem;
 
         /* logo */
         .nav__item--left {
@@ -49,16 +49,16 @@ nav {
             }
 
             .nav__item--logo {
-                height: 45px;
+                height: 4.5rem;
                 transform: scaleX(-1);
                 transition: all 0.3s ease;
             }
 
             span {
                 font-size: font-size(nav-logo);
-                margin-left: 6px;
+                margin-left: 0.6rem;
                 position: absolute;
-                top: 8px;
+                top: 0.8rem;
                 transition: all 0.3s ease;
             }
         }
@@ -68,7 +68,7 @@ nav {
             color: colour(white);
             font-size: font-size(nav-link);
             font-weight: normal;
-            margin-left: 25px;
+            margin-left: 2.5rem;
             text-decoration: none;
             transition: all 0.3s ease;
 

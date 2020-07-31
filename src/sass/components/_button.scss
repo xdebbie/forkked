@@ -12,13 +12,12 @@ $  BUTTON
     font-family: font(myriad);
     font-size: font-size(button);
     font-weight: normal;
-    height: 38px;
-    height: 38px;
+    height: 3.8rem;
     outline: none;
     text-decoration: none;
     transition: all 0.3s ease;
     user-select: none;
-    width: 106px;
+    width: 10.6rem;
 
     &:hover {
         background: linear-gradient(
@@ -30,11 +29,11 @@ $  BUTTON
         );
         animation: hue 4s linear 1;
         background-size: 400% 400%;
-        box-shadow: 3px 3px 2px 2px rgba($color: white, $alpha: 0.6);
+        box-shadow: 0.3rem 0.3rem 0.2rem 0.2rem rgba($color: white, $alpha: 0.6);
     }
 
     &:active {
-        box-shadow: 2px 2px 1px 1px rgba($color: white, $alpha: 0.3);
+        box-shadow: 0.2rem 0.2rem 0.1rem 0.1rem rgba($color: white, $alpha: 0.3);
         transform: translateY(4px);
     }
 }
@@ -42,8 +41,8 @@ $  BUTTON
 .btn__more {
     display: block;
     font-size: font-size(subtitle-featured);
-    line-height: 38px;
-    margin: 30px auto 85px auto;
+    line-height: 3.8rem;
+    margin: 3rem auto 8.5rem auto;
     text-align: center;
-    width: 136px;
+    width: 13.6rem;
 }

@@ -7,7 +7,7 @@ header {
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 420px;
+            height: 42em;
             left: 50%;
             margin-left: -50vw;
             margin-right: -50vw;
@@ -36,12 +36,12 @@ header {
             flex-direction: column;
             justify-content: center;
             margin: 0 auto;
-            max-width: 1000px;
-            min-height: 420px;
+            max-width: 100em;
+            min-height: 42em;
 
             .header__info {
-                margin-top: 120px;
-                max-width: 720px;
+                margin-top: 12rem;
+                max-width: 72rem;
 
                 .header__title {
                     /* adjust here for an aesthetic header title */
@@ -50,8 +50,8 @@ header {
                     font-size: font-size(title-featured);
                     font-weight: normal;
                     line-height: line-height(title-featured);
-                    margin: 0 0 10px 0;
-                    max-width: 400px;
+                    margin: 0 0 1rem 0;
+                    max-width: 40rem;
                 }
 
                 .header__subtitle {
@@ -60,8 +60,8 @@ header {
                     font-size: font-size(subtitle-featured);
                     font-weight: normal;
                     line-height: line-height(subtitle-featured);
-                    margin: 0 0 20px 0;
-                    max-width: 440px;
+                    margin: 0 0 2rem 0;
+                    max-width: 44rem;
                 }
 
                 .btn__med {
