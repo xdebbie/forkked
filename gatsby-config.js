@@ -92,6 +92,15 @@ module.exports = {
                             ], //Optional: Override URL of a service provider, e.g to enable youtube-nocookie support
                             containerClass: 'embedVideo-container' //Optional: Custom CSS class for iframe container, for multiple classes separate them by space
                         }
+                    },
+                    {
+                        resolve: `gatsby-remark-images-contentful`,
+                        options: {
+                            // It's important to specify the maxWidth (in pixels) of
+                            // the content container as this plugin uses this as the
+                            // base for generating different widths of each image.
+                            maxWidth: 664
+                        }
                     }
                 ]
             }

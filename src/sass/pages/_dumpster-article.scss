@@ -58,6 +58,19 @@ $  DUMPSTER (ARTICLE PAGE)
     right: 50%;
     width: 100vw;
 
+    .dumpster__metadata {
+        margin: 6rem auto;
+        max-width: 84em;
+
+        .dumpster__title {
+            font-family: font(headline);
+            font-size: font-size(title-article);
+            line-height: line-height(title-article);
+            font-weight: normal;
+            max-width: 82rem;
+        }
+    }
+
     .dumpster__content {
         margin: 6rem auto;
         max-width: 84em;
