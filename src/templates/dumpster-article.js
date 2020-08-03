@@ -1,12 +1,12 @@
 import React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 import '../sass/main.scss'
 
 // Import components
 import Layout from '../components/layout'
 import Nav from '../components/header/nav'
-import Footer from '../components/footer/footer'
+import FooterWeb from '../components/footer/footer-web'
 
 /** A NOTE ON THE CATEGORY QUERY
  * Category is an array, so on GraphQL it's queried nested just like
@@ -62,8 +62,8 @@ const DumpsterTemplate = props => {
                         }}
                     />
                 </div>
+                <FooterWeb />
             </div>
-            <Footer />
         </Layout>
     )
 }

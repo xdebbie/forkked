@@ -51,7 +51,7 @@ exports.createPages = ({ actions, graphql }) => {
                 // I'm just creating the new page URL's being forkked.com/dumpster/slug (the slug I set already on Contentful)
                 path: `dumpster/${node.slug}`,
                 // change template here in case I change the name dumpster later on
-                component: path.resolve(`src/templates/dumpster.js`),
+                component: path.resolve(`src/templates/dumpster-article.js`),
                 context: {
                     id: node.id
                 }

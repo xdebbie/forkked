@@ -11,22 +11,17 @@ import AppleSM from '../../assets/applemusic-small.svg'
 import TidalSM from '../../assets/tidal-small.svg'
 import SpotifySM from '../../assets/spotify-small.svg'
 
-const Footer = () => {
+const FooterWeb = () => {
     return (
         <div className="footer">
             <div
-                className="footer__hero"
+                className="footer__web--hero"
                 style={{
-                    backgroundImage: `linear-gradient(
-                to bottom, 
-                rgba(10, 10, 10, 1) 0%,
-                rgba(10, 10, 10, 0.57) 50%,
-                rgba(10, 10, 10, 0.44) 60%,
-                rgba(10, 10, 10, 0.28) 100%),
+                    backgroundImage: `
                 url(${footer})`
                 }}
             ></div>
-            <nav className="nav__footer--home">
+            <nav className="nav__footer--web">
                 <div className="footer__items">
                     <Link className="footer__item--link" to="/newsletter">
                         Newsletter
@@ -78,4 +73,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export default FooterWeb

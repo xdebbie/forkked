@@ -17,7 +17,23 @@ $  FOOTER
         z-index: -1;
     }
 
-    nav {
+    // footer hero of all pages except for the home page
+    .footer__web--hero {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 21em;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: absolute;
+        right: 50%;
+        transform: translateY(0);
+        width: 100vw;
+        z-index: -1;
+    }
+
+    .nav__footer--home {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -35,7 +51,31 @@ $  FOOTER
             rgba(10, 10, 10, 0.4) 50%,
             rgba(10, 10, 10, 0.7) 100%
         );
+    }
 
+    // footer of all pages except for the home page
+    .nav__footer--web {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 21em;
+        left: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        position: absolute;
+        right: 50%;
+        transform: translateY(8em);
+        width: 100vw;
+        background: linear-gradient(
+            to bottom,
+            rgba(10, 10, 10, 0.2) 0%,
+            rgba(10, 10, 10, 0.44) 50%,
+            rgba(10, 10, 10, 1) 100%
+        );
+    }
+
+    .nav__footer--home,
+    .nav__footer--web {
         .footer__items {
             display: flex;
             justify-content: center;
