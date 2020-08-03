@@ -6,6 +6,7 @@ import '../sass/main.scss'
 // Import components
 import Layout from '../components/layout'
 import Nav from '../components/header/nav'
+import Footer from '../components/footer/footer'
 
 /** A NOTE ON THE CATEGORY QUERY
  * Category is an array, so on GraphQL it's queried nested just like
@@ -35,22 +36,23 @@ const DumpsterTemplate = props => {
                 </div>
             </div>
             <div className="dumpster__wrapper">
-                <div className="dumpster__metadata">
+                <div className="dumpster__container">
                     <h2 className="dumpster__title">
                         {props.data.contentfulBlog.title}
                     </h2>
-                    <div className="dumpster__meta">
+                    <div className="dumpster__metadata">
                         <div className="dumpster__pubdate">
                             {props.data.contentfulBlog.pubDate}
                         </div>
                         {props.data.contentfulBlog.category.map(category => (
                             <div className="dumpster__category">
-                                Archived in {category.title}
+                                Archived in <span>{category.title}</span>
                             </div>
                         ))}
                         <div className="dumpster__subject">
                             {props.data.contentfulBlog.subject}
                         </div>
+                        <hr />
                     </div>
                 </div>
                 <div className="dumpster__content">
@@ -61,6 +63,7 @@ const DumpsterTemplate = props => {
                     />
                 </div>
             </div>
+            <Footer />
         </Layout>
     )
 }

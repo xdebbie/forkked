@@ -58,16 +58,44 @@ $  DUMPSTER (ARTICLE PAGE)
     right: 50%;
     width: 100vw;
 
-    .dumpster__metadata {
+    .dumpster__container {
         margin: 6rem auto;
         max-width: 84em;
 
         .dumpster__title {
             font-family: font(headline);
             font-size: font-size(title-article);
-            line-height: line-height(title-article);
             font-weight: normal;
+            line-height: line-height(title-article);
             max-width: 82rem;
+        }
+
+        .dumpster__metadata {
+            font-family: font(myriad);
+            font-size: font-size(button);
+            line-height: line-height(subtitle-featured);
+
+            .dumpster__category {
+                span {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-style: italic;
+                }
+            }
+
+            .dumpster__subject {
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+
+            hr {
+                display: block;
+                height: 1px;
+                border: 0;
+                border-top: 1px solid colour(cod-gray);
+                margin: 0.5em 0;
+                padding: 0;
+            }
         }
     }
 

@@ -6,7 +6,7 @@ $mobile-m: 374px;
 $mobile-l: 410px;
 $tablet: 600px;
 $desktop: 1025px;
-$desktop-l: 1400px;
+$desktop-l: 1200px;
 /* height */
 $h-mobile-m: 730px;
 $h-mobile-l: 810px;
@@ -15,31 +15,31 @@ $h-mobile-l: 810px;
 $  MIXINS
  ----------------------------*/
 @mixin mobile-m {
-  @media (min-height: #{$h-mobile-m}) and (min-width: #{$mobile-m}) {
-    @content;
-  }
+    @media (min-height: #{$h-mobile-m}) and (min-width: #{$mobile-m}) {
+        @content;
+    }
 }
 
 @mixin mobile-l {
-  @media (min-height: #{$h-mobile-l}) and (min-width: #{$mobile-m}) {
-    @content;
-  }
+    @media (min-height: #{$h-mobile-l}) and (min-width: #{$mobile-m}) {
+        @content;
+    }
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet}) {
-    @content;
-  }
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
 }
 
 @mixin desktop {
-  @media (min-width: #{$desktop}) {
-    @content;
-  }
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
 }
 
 @mixin desktop-l {
-  @media (min-width: #{$desktop-l}) {
-    @content;
-  }
+    @media (min-width: #{$desktop-l}) {
+        @content;
+    }
 }
