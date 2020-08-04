@@ -7,6 +7,9 @@ import '../sass/main.scss'
 import Layout from '../components/layout'
 import Nav from '../components/header/nav'
 import FooterWeb from '../components/footer/footer-web'
+import Tidal from '../assets/tidal.svg'
+import Apple from '../assets/applemusic.svg'
+import Spotify from '../assets/spotify.svg'
 
 /** A NOTE ON THE CATEGORY QUERY
  * Category is an array, so on GraphQL it's queried nested just like
@@ -61,6 +64,31 @@ const DumpsterTemplate = props => {
                             __html: `${props.data.contentfulBlog.content.childMarkdownRemark.html}`
                         }}
                     />
+                    <div className="stream__track">
+                        Stream "
+                        <span>{props.data.contentfulBlog.streamTrack}</span>"
+                        now:
+                    </div>
+                    <div className="stream__links">
+                        <a
+                            className="stream__icon--link"
+                            href={props.data.contentfulBlog.streamTidal}
+                        >
+                            <Tidal className="stream__icon" />
+                        </a>
+                        <a
+                            className="stream__icon--link"
+                            href={props.data.contentfulBlog.streamApple}
+                        >
+                            <Apple className="stream__icon" />
+                        </a>
+                        <a
+                            className="stream__icon--link"
+                            href={props.data.contentfulBlog.streamSpotify}
+                        >
+                            <Spotify className="stream__icon" />
+                        </a>
+                    </div>
                 </div>
                 <FooterWeb />
             </div>
@@ -88,6 +116,10 @@ export const query = graphql`
                     html
                 }
             }
+            streamApple
+            streamSpotify
+            streamTidal
+            streamTrack
             seoTitle
             seoDescription
             seoAuthor

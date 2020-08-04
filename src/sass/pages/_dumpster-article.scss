@@ -149,5 +149,55 @@ $  DUMPSTER (ARTICLE PAGE)
             margin: 5rem auto 0.5rem auto;
             width: 80em;
         }
+
+        .stream__track {
+            font-family: font(myriad);
+            font-size: font-size(subtitle-featured);
+            line-height: line-height(article);
+            text-transform: uppercase;
+
+            span {
+                font-weight: bold;
+                font-style: italic;
+            }
+        }
+
+        .stream__links {
+            display: flex;
+            flex-direction: row;
+            margin-top: 0.6rem;
+
+            .stream__icon {
+                height: 1.8rem;
+                width: 6rem;
+
+                path {
+                    fill: colour(cod-gray);
+                    stroke: colour(cod-gray);
+                    transition: all 0.3s ease;
+                }
+
+                &:nth-of-type(1) {
+                    margin-right: 2rem;
+                    width: 12rem;
+                }
+
+                &:nth-of-type(3) {
+                    width: 8rem;
+                }
+            }
+
+            .stream__icon--link {
+                &:hover {
+                    .stream__icon {
+                        path {
+                            fill: colour(shiraz);
+                            stroke: colour(shiraz);
+                            transition: all 0.3s ease;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
