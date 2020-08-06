@@ -54,7 +54,8 @@ $font-sizes: (
     subtitle-featured: 1.8rem,
     nav-link: 1.6rem,
     footer: 1.5rem,
-    button: 1.4rem
+    button: 1.4rem,
+    small: 1.2rem
 );
 
 @function font-size($font-size-name) {
