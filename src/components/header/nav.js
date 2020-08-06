@@ -6,10 +6,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { window } from 'browser-monads'
 import Logo from '../../assets/logo.svg'
+import DrawerToggleButton from '../header/drawer-toggle'
 
-const Nav = () => (
+const Nav = props => (
     <nav>
         <div className="nav__items">
+            <div className="toggle__button">
+                <DrawerToggleButton click={props.drawerClickHandler} />
+            </div>
             <a className="nav__item--left" href="/">
                 <Logo className="nav__item--logo" />
                 <span>Forkked</span>

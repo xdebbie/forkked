@@ -24,7 +24,8 @@ $  4. LAYOUT
 /* ---------------------------
 $  5. COMPONENTS
  ----------------------------*/
-@import 'components/button';
+@import 'components/button', 'components/drawer-toggle',
+    'components/side-drawer', 'components/backdrop';
 
 /* ---------------------------
 $  6. PAGES

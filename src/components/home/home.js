@@ -4,7 +4,7 @@ $  MAIN CONTENT (HOME)
 import React from 'react'
 import { graphql, navigate, StaticQuery } from 'gatsby'
 
-export default () => (
+export default ({ element }) => (
     <StaticQuery
         query={graphql`
             query HomeQuery {
