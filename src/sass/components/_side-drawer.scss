@@ -3,7 +3,7 @@ $  SIDE DRAWER (NAV)
  --------------------------------------------*/
 .side__drawer {
     height: 100vh;
-    background: colour(cod-gray);
+    background: colour(crimson);
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
     left: 0;
@@ -19,13 +19,14 @@ $  SIDE DRAWER (NAV)
         top: 0;
         height: 6em;
         width: 100%;
-        background: colour(folly);
+        background: colour(shiraz);
 
         h1 {
             font-family: font(praktikal);
             font-weight: normal;
             font-size: font-size(nav-logo);
-            margin: 1.4rem 0 0 2rem;
+            margin: 1.5rem 0 0 2rem;
+            color: colour(sazerac);
         }
     }
 

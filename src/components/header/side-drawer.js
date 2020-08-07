@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import galaxy from '../../images/galaxy.png'
 import Facebook from '../../assets/facebook.svg'
 import Instagram from '../../assets/instagram.svg'
 import Twitter from '../../assets/twitter.svg'
@@ -13,7 +14,18 @@ const SideDrawer = props => {
         drawerClasses = 'side__drawer open'
     }
     return (
-        <nav className={drawerClasses}>
+        <nav
+            className={drawerClasses}
+            style={{
+                backgroundImage: `linear-gradient(
+                to bottom, 
+                rgba(10, 10, 10, 0.6) 0%,
+                rgba(10, 10, 10, 0.57) 50%,
+                rgba(10, 10, 10, 0.44) 60%,
+                rgba(10, 10, 10, 0.28) 100%),
+                url(${galaxy})`
+            }}
+        >
             <div className="side__logo">
                 <h1>Forkked</h1>
             </div>
