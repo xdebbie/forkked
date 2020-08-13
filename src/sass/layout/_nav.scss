@@ -20,11 +20,10 @@ nav {
         background-color: transparent;
         border: none;
         display: flex;
-        height: 3rem;
+        height: 4rem;
         margin-top: 2rem;
 
         @include desktop {
-            height: 4rem;
             justify-content: flex-end;
             margin-top: 4rem;
         }

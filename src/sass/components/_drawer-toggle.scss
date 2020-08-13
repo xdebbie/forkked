@@ -13,6 +13,8 @@ $  TOGGLE BUTTON (NAV)
     padding: 0;
     box-sizing: border-box;
     justify-content: space-around;
+    position: absolute;
+    top: 0.5rem;
 
     &:focus {
         outline: none;

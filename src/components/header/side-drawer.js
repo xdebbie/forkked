@@ -77,6 +77,20 @@ const SideDrawer = props => {
                 </a>
             </ul>
             <hr />
+            <ul className="side__legal">
+                <li>
+                    <a href="/">Newsletter</a>
+                </li>
+                <li>
+                    <a href="/">Advertising</a>
+                </li>
+                <li>
+                    <a href="/">Reprint/permissions</a>
+                </li>
+                <li>
+                    <a href="/">Contact</a>
+                </li>
+            </ul>
             <div className="side__disclaimer">
                 <p>
                     © 2020 forkked. All rights reserved. Use of and/or

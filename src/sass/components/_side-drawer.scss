@@ -13,6 +13,7 @@ $  SIDE DRAWER (NAV)
     z-index: 1;
     transform: translateX(-100%);
     transition: transform 150ms ease-out;
+    background-position: 5% 100%;
 
     .side__logo {
         position: absolute;
@@ -30,11 +31,12 @@ $  SIDE DRAWER (NAV)
         }
     }
 
+    //.side__items
     ul {
         list-style: none;
         display: flex;
         flex-direction: column;
-        margin: 10rem 0 2rem 2rem;
+        margin: 10rem 0 3rem 2rem;
         padding: 0;
 
         li {
@@ -62,8 +64,8 @@ $  SIDE DRAWER (NAV)
     }
 
     hr {
-        margin: 4rem 2rem;
-        color: colour(sky);
+        margin: 2rem 2rem 2rem 2rem;
+        color: colour(sazerac);
     }
 
     .side__social {
@@ -105,13 +107,22 @@ $  SIDE DRAWER (NAV)
         }
     }
 
+    .side__legal {
+        margin: 3rem 0rem 3rem 2rem;
+
+        a {
+            font-size: 1.6rem;
+            line-height: 0;
+        }
+    }
+
     .side__disclaimer {
         font-family: font(myriad);
         font-size: font-size(small);
         font-weight: normal;
         color: colour(sazerac);
         line-height: line-height(subject);
-        margin: 0 3rem 3rem 3rem;
+        margin: 5rem 3rem 3rem 3rem;
         text-align: center;
         text-transform: none;
     }
