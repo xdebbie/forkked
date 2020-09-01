@@ -3,7 +3,7 @@ $  SIDE DRAWER (NAV)
  --------------------------------------------*/
 .side__drawer {
     height: 100vh;
-    background: colour(crimson);
+    background: colour(cod-gray);
     box-shadow: 1px 0px 7px rgba(0, 0, 0, 0.5);
     position: fixed;
     left: 0;
@@ -20,7 +20,7 @@ $  SIDE DRAWER (NAV)
         top: 0;
         height: 6em;
         width: 100%;
-        background: colour(shiraz);
+        background: colour(cod-gray-tr);
 
         h1 {
             font-family: font(praktikal);
@@ -56,7 +56,7 @@ $  SIDE DRAWER (NAV)
                 transition: all 0.3s ease;
 
                 &:hover {
-                    color: colour(sky);
+                    color: colour(pastel);
                     transition: all 0.3s ease;
                 }
             }
@@ -84,7 +84,7 @@ $  SIDE DRAWER (NAV)
                 width: 3.5rem;
 
                 &:hover {
-                    stroke: colour(sky);
+                    stroke: colour(pastel);
                     transform: scale(1.2);
                     transition: all 0.3s ease;
                 }
@@ -98,8 +98,8 @@ $  SIDE DRAWER (NAV)
                 width: 3.5rem;
 
                 &:hover {
-                    fill: colour(sky);
-                    stroke: colour(sky);
+                    fill: colour(pastel);
+                    stroke: colour(pastel);
                     transform: scale(1.2);
                     transition: all 0.3s ease;
                 }

@@ -93,14 +93,8 @@ const SideDrawer = props => {
             </ul>
             <div className="side__disclaimer">
                 <p>
-                    © 2020 forkked. All rights reserved. Use of and/or
-                    registration on any portion of this site constitutes
-                    acceptance of our User Agreement (updated 1/1/20) and
-                    Privacy Policy and Cookie Statement (updated 1/1/20). The
-                    material on this site may not be reproduced, distributed,
-                    transmitted, cached or otherwise used, except with prior
-                    written permission of forkked. All content of © Condé Nast
-                    is accordingly credited.
+                    © 2020 forkked. All rights reserved. All content belonging
+                    to © Condé Nast is accordingly credited.
                 </p>
             </div>
         </nav>

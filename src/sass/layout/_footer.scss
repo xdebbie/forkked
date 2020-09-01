@@ -4,7 +4,7 @@ $  FOOTER
 .footer {
     .footer__hero,
     .footer__web--hero {
-        background-position: center;
+        background-position: 0% 100%;
         background-repeat: no-repeat;
         background-size: cover;
         height: 67em;
@@ -61,7 +61,11 @@ $  FOOTER
         .footer__items {
             display: flex;
             justify-content: center;
-            margin: 4rem auto 1rem auto;
+            margin: 3rem auto 1rem auto;
+
+            @include tablet {
+                margin: 4em auto 1rem auto;
+            }
 
             .footer__item--link {
                 font-size: font-size(footer);
@@ -72,8 +76,12 @@ $  FOOTER
                 text-transform: uppercase;
                 transition: all 0.3s ease;
 
+                &:nth-of-type(4) {
+                    margin-right: 0;
+                }
+
                 &:hover {
-                    color: colour(cod-gray-tr);
+                    color: colour(pastel);
                     transition: all 0.3s ease;
                 }
             }
@@ -94,7 +102,7 @@ $  FOOTER
                     width: 3.5rem;
 
                     &:hover {
-                        stroke: colour(cod-gray-tr);
+                        stroke: colour(pastel);
                         transform: scale(1.2);
                         transition: all 0.3s ease;
                     }
@@ -108,8 +116,8 @@ $  FOOTER
                     width: 3.5rem;
 
                     &:hover {
-                        fill: colour(cod-gray-tr);
-                        stroke: colour(cod-gray-tr);
+                        fill: colour(pastel);
+                        stroke: colour(pastel);
                         transform: scale(1.2);
                         transition: all 0.3s ease;
                     }
@@ -119,13 +127,23 @@ $  FOOTER
 
         .disclaimer {
             font-family: font(myriad);
-            font-size: font-size(button);
+            font-size: font-size(smaller);
             font-weight: normal;
             line-height: line-height(footer);
             margin: 0 auto 3rem auto;
+            padding: 0 2rem;
             max-width: 100rem;
             text-align: center;
             text-transform: none;
+
+            @include tablet {
+                font-size: font-size(small-tablet);
+            }
+
+            @include desktop {
+                padding: 0;
+                font-size: font-size(button);
+            }
         }
     }
 }
