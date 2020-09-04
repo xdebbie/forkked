@@ -90,7 +90,7 @@ exports.createPages = ({ actions, graphql }) => {
                  * skip the first 12 items and start querying from the 13th article
                  */
 
-                path: i === 0 ? `/archive` : `/archive/${i + 1}`,
+                path: i === 0 ? `/dumpster` : `/dumpster/${i + 1}`,
                 component: path.resolve('./src/templates/archive.js'),
                 context: {
                     limit: blogsPerPage,
