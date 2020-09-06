@@ -19,7 +19,127 @@ const Archive = props => {
 
     return (
         <Layout>
+            <SEO
+                title="Dumpster"
+                keywords={[
+                    'blog',
+                    'forkked articles',
+                    'articles',
+                    'reviews',
+                    'posts',
+                    'blog posts'
+                ]}
+            />
             <Nav />
+            <header>
+                <div className="dumpster__section">
+                    <div
+                        className="dumpster__hero"
+                        style={{ backgroundImage: `url(${genHeaderImg})` }}
+                    ></div>
+                    <div className="dumpster__nav">
+                        <Link
+                            to="/dumpster"
+                            className={
+                                window.location.href.indexOf('/dumpster') > 0
+                                    ? 'dumpster__nav--link selected'
+                                    : 'dumpster__nav--link'
+                            }
+                        >
+                            Guide
+                        </Link>
+                        <Link
+                            to="/category/staffs-rejects"
+                            className={
+                                window.location.href.indexOf(
+                                    'category/staffs-rejects'
+                                ) > 0
+                                    ? 'dumpster__nav--link selected'
+                                    : 'dumpster__nav--link'
+                            }
+                        >
+                            {' '}
+                            Staff's rejects{' '}
+                        </Link>
+                        <Link
+                            to="/category/wall-of-shame"
+                            className={
+                                window.location.href.indexOf(
+                                    'category/wall-of-shame'
+                                ) > 0
+                                    ? 'dumpster__nav--link selected'
+                                    : 'dumpster__nav--link'
+                            }
+                        >
+                            {' '}
+                            Wall of shame{' '}
+                        </Link>
+                        <Link
+                            to="/category/worst-new-music"
+                            className={
+                                window.location.href.indexOf(
+                                    'category/worst-new-music'
+                                ) > 0
+                                    ? 'dumpster__nav--link selected'
+                                    : 'dumpster__nav--link'
+                            }
+                        >
+                            {' '}
+                            Worst new music{' '}
+                        </Link>
+                        <Link
+                            to="/category/opinion"
+                            className={
+                                window.location.href.indexOf(
+                                    'category/opinion'
+                                ) > 0
+                                    ? 'dumpster__nav--link selected'
+                                    : 'dumpster__nav--link'
+                            }
+                        >
+                            {' '}
+                            Opinion{' '}
+                        </Link>
+                        <Link
+                            to="/category/reviews"
+                            className={
+                                window.location.href.indexOf(
+                                    'category/reviews'
+                                ) > 0
+                                    ? 'dumpster__nav--link selected'
+                                    : 'dumpster__nav--link'
+                            }
+                        >
+                            {' '}
+                            Reviews{' '}
+                        </Link>
+                    </div>
+                </div>
+            </header>
+
+            <div className="feed">
+                {blogContent.edges.map(edge => (
+                    <div
+                        key="{edge.node.id}"
+                        className="card"
+                        style={{
+                            backgroundImage: `linear-gradient(
+                            to bottom,
+                            rgba(10, 10, 10, 0) 0%,
+                            rgba(10, 10, 10, 0) 50%,
+                            rgba(10, 10, 10, 0.7) 100%),
+                            url(${edge.node.featuredImage.fluid.src})`
+                        }}
+                        onClick={() => navigate(`/dumpster/${edge.node.slug}`)}
+                    >
+                        {' '}
+                        {edge.node.category.map(category => (
+                            <p className="card__category">{category.title}</p>
+                        ))}
+                        <p className="card__title">{edge.node.title}</p>
+                    </div>
+                ))}
+            </div>
         </Layout>
     )
 }
