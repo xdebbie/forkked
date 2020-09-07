@@ -140,6 +140,23 @@ const Archive = props => {
                     </div>
                 ))}
             </div>
+
+            <div className="pagination">
+                <div className="pagination__item">
+                    {!isFirst && (
+                        <Link to={prevPage} rel="prev">
+                            <div className="arrow__back"></div>
+                        </Link>
+                    )}
+                </div>
+                <div className="pagination__item">
+                    {!isLast && (
+                        <Link to={nextPage} rel="next">
+                            <div className="arrow__next"></div>
+                        </Link>
+                    )}
+                </div>
+            </div>
         </Layout>
     )
 }
