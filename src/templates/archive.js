@@ -5,8 +5,9 @@ import Layout from '../components/layout'
 import Nav from '../components/header/nav'
 import SEO from '../components/seo'
 import '../sass/main.scss'
+// The css for this page is on _dumpster.scss
 
-import genHeaderImg from '../images/galaxy.png'
+import headerImg from '../images/galaxy.png'
 
 const Archive = props => {
     const blogContent = props.data.allContentfulBlog
@@ -32,10 +33,10 @@ const Archive = props => {
             />
             <Nav />
             <header>
-                <div className="dumpster__section">
+                <div className="dumpster__header">
                     <div
                         className="dumpster__hero"
-                        style={{ backgroundImage: `url(${genHeaderImg})` }}
+                        style={{ backgroundImage: `url(${headerImg})` }}
                     ></div>
                     <div className="dumpster__nav">
                         <Link

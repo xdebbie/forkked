@@ -1,0 +1,22 @@
+// This is the css file for the archive.js
+
+.dumpster__header {
+    .dumpster__nav {
+        display: flex;
+        min-height: 20em;
+        padding: 6em 20% 0 20%;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        margin-bottom: 6em;
+    }
+
+    .dumpster__nav--link {
+        font-family: font(praktikal);
+        font-size: 12px;
+        font-weight: normal;
+        color: colour(apricot);
+        transition: all 0.3s ease 0s;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
