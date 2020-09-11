@@ -53,13 +53,27 @@ $  CARDS (MAIN // HOME PAGE)
             }
         }
 
-        .card__subject {
+        .card__subject,
+        .card__category {
             color: colour(white);
             font-family: font(geogrotesque);
             font-size: font-size(nav-link);
             font-weight: normal;
             line-height: line-height(subject);
             margin: 0;
+            padding: 0;
+        }
+
+        .card__wrapper {
+            width: max-content;
+            background-color: colour(black-tr);
+            border-radius: 5px;
+            padding: 5px 5px 2px 5px;
+            margin-bottom: 0.4rem;
+
+            .card__category {
+                text-transform: uppercase;
+            }
         }
 
         .card__title {

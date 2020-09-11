@@ -77,7 +77,7 @@ exports.createPages = ({ actions, graphql }) => {
     ).then(result => {
         const blogs = result.data.allContentfulBlog.edges
         // Articles per page that will be shown
-        const blogsPerPage = 3
+        const blogsPerPage = 6
         const numPages = Math.ceil(blogs.length / blogsPerPage)
 
         // Array is the number of pages, and for each value "_" that it contains, it will create a page "i"
