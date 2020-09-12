@@ -39,7 +39,7 @@
         margin-bottom: 6em;
 
         @include desktop {
-            padding: 6em 18% 0 18%;
+            padding: 6em 22% 0 22%;
             justify-content: space-evenly;
         }
     }
@@ -52,6 +52,7 @@
         transition: all 0.3s ease 0s;
         text-decoration: none;
         text-transform: uppercase;
+        padding: 5px 5px 4px 5px;
 
         &:active {
             color: white;
@@ -62,7 +63,21 @@
             width: max-content;
             background-color: colour(black-tr);
             border-radius: 5px;
-            padding: 5px 5px 2px 5px;
+            padding: 5px 5px 4px 5px;
+
+            &:after {
+                width: 100%;
+            }
+        }
+
+        &:after {
+            content: '';
+            display: dumpster;
+            width: 0;
+            height: 3px;
+            background: green;
+            transition: width 0.3s;
+            margin-top: 1rem;
         }
     }
 }

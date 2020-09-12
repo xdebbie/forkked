@@ -72,17 +72,6 @@ class ArchiveTemplate extends Component {
                         ></div>
                         <div className="dumpster__nav">
                             <Link
-                                to="/dumpster"
-                                className={
-                                    window.location.href.indexOf('/dumpster') >
-                                    0
-                                        ? 'dumpster__nav--link selected'
-                                        : 'dumpster__nav--link'
-                                }
-                            >
-                                Guide
-                            </Link>
-                            <Link
                                 to="/category/staffs-rejects"
                                 className={
                                     window.location.href.indexOf(
