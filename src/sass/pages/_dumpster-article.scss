@@ -59,8 +59,12 @@ $  DUMPSTER (ARTICLE PAGE)
     width: 100vw;
 
     .dumpster__container {
-        margin: 6rem auto;
+        margin: 6rem 4rem;
         max-width: 84em;
+
+        @include desktop {
+            margin: 6rem auto;
+        }
 
         .dumpster__title {
             font-family: font(headline);
@@ -100,9 +104,13 @@ $  DUMPSTER (ARTICLE PAGE)
     }
 
     .dumpster__content {
-        margin: 6rem auto;
+        margin: 6rem 4rem;
         min-height: 100vh;
         max-width: 84em;
+
+        @include desktop {
+            margin: 6rem auto;
+        }
 
         p {
             color: colour(black);
