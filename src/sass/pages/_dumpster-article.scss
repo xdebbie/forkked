@@ -115,10 +115,14 @@ $  DUMPSTER (ARTICLE PAGE)
         p {
             color: colour(black);
             font-family: font(meta);
-            font-size: font-size(ptext);
+            font-size: font-size(ptext-sm);
             font-weight: normal;
             line-height: line-height(article);
             margin: 3.5rem 0;
+
+            @include desktop {
+                font-size: font-size(ptext);
+            }
         }
 
         figcaption {
