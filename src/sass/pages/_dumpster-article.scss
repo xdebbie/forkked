@@ -176,8 +176,12 @@ $  DUMPSTER (ARTICLE PAGE)
 
         .stream__links {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             margin-top: 0.6rem;
+
+            @include tablet {
+                flex-direction: row;
+            }
 
             .stream__icon {
                 height: 1.8rem;
@@ -200,6 +204,12 @@ $  DUMPSTER (ARTICLE PAGE)
             }
 
             .stream__icon--link {
+                margin: 1rem 0;
+
+                @include tablet {
+                    margin: 0;
+                }
+
                 &:hover {
                     .stream__icon {
                         path {

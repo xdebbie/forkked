@@ -46,7 +46,7 @@ class ArchiveTemplate extends Component {
         const isLast = currentPage === numPages
         const prevPage =
             currentPage - 1 === 1 ? '/dumpster' : `/dumpster/${currentPage - 1}`
-        const nextPage = `/blog/${currentPage + 1}`
+        const nextPage = `/dumpster/${currentPage + 1}`
 
         return (
             <Layout>

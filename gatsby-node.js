@@ -81,7 +81,9 @@ exports.createPages = ({ actions, graphql }) => {
         const numPages = Math.ceil(blogs.length / blogsPerPage)
 
         // Array is the number of pages, and for each value "_" that it contains, it will create a page "i"
-        Array.from({ length: numPages }).forEach((_, i) => {
+        Array.from({
+            length: numPages
+        }).forEach((_, i) => {
             createPage({
                 /* This IF will analyse whether it is the first page (i === 0), if it is,
                  * then it will create the url path "archive". If it's not, it will find its position
@@ -92,6 +94,52 @@ exports.createPages = ({ actions, graphql }) => {
                  */
 
                 path: i === 0 ? `/dumpster` : `/dumpster/${i + 1}`,
+                component: path.resolve('./src/templates/archive.js'),
+                context: {
+                    limit: blogsPerPage,
+                    skip: i * blogsPerPage,
+                    numPages,
+                    currentPage: i + 1
+                }
+            })
+        })
+    })
+
+    // Create the "STAFF'S REJECTS" pages
+    const getStaffsRejects = makeRequest(
+        graphql,
+        `
+    {
+        allContentfulBlog (
+            sort: { fields: createdAt, order: DESC }
+            filter: {
+                node_locale: { eq: "en-US" }
+                category: {elemMatch: {title: {eq: "Staff's rejects"}}}
+            },)
+        {
+            edges {
+                node {
+                    id
+                    slug
+                }
+            }
+        }
+    }
+    `
+    ).then(result => {
+        const blogs = result.data.allContentfulBlog.edges
+        // Articles per page that will be shown
+        const blogsPerPage = 6
+        const numPages = Math.ceil(blogs.length / blogsPerPage)
+
+        Array.from({
+            length: numPages
+        }).forEach((_, i) => {
+            createPage({
+                path:
+                    i === 0
+                        ? `/category/staffs-rejects`
+                        : `/category/staffs-rejects/${i + 1}`,
                 component: path.resolve('./src/templates/archive.js'),
                 context: {
                     limit: blogsPerPage,
