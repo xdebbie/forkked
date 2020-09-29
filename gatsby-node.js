@@ -140,7 +140,7 @@ exports.createPages = ({ actions, graphql }) => {
                     i === 0
                         ? `/category/staffs-rejects`
                         : `/category/staffs-rejects/${i + 1}`,
-                component: path.resolve('./src/templates/archive.js'),
+                component: path.resolve('./src/templates/staffs-rejects.js'),
                 context: {
                     limit: blogsPerPage,
                     skip: i * blogsPerPage,
@@ -151,5 +151,5 @@ exports.createPages = ({ actions, graphql }) => {
         })
     })
 
-    return Promise.all([getBlog, getArchive])
+    return Promise.all([getBlog, getArchive, getStaffsRejects])
 }
