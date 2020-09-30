@@ -105,7 +105,7 @@ exports.createPages = ({ actions, graphql }) => {
         })
     })
 
-    // Create the "STAFF'S REJECTS" pages
+    // Create the "STAFF'S REJECTS" filtered page
     const getStaffsRejects = makeRequest(
         graphql,
         `
@@ -151,5 +151,197 @@ exports.createPages = ({ actions, graphql }) => {
         })
     })
 
-    return Promise.all([getBlog, getArchive, getStaffsRejects])
+    // Create the "WALL OF SHAME" filtered page
+    const getWallOfShame = makeRequest(
+        graphql,
+        `
+    {
+        allContentfulBlog (
+            sort: { fields: createdAt, order: DESC }
+            filter: {
+                node_locale: { eq: "en-US" }
+                category: {elemMatch: {title: {eq: "Wall of shame"}}}
+            },)
+        {
+            edges {
+                node {
+                    id
+                    slug
+                }
+            }
+        }
+    }
+    `
+    ).then(result => {
+        const blogs = result.data.allContentfulBlog.edges
+        // Articles per page that will be shown
+        const blogsPerPage = 6
+        const numPages = Math.ceil(blogs.length / blogsPerPage)
+
+        Array.from({
+            length: numPages
+        }).forEach((_, i) => {
+            createPage({
+                path:
+                    i === 0
+                        ? `/category/wall-of-shame`
+                        : `/category/wall-of-shame/${i + 1}`,
+                component: path.resolve('./src/templates/wall-of-shame.js'),
+                context: {
+                    limit: blogsPerPage,
+                    skip: i * blogsPerPage,
+                    numPages,
+                    currentPage: i + 1
+                }
+            })
+        })
+    })
+
+    // Create the "WORST NEW MUSIC" filtered page
+    const getWorstNewMusic = makeRequest(
+        graphql,
+        `
+    {
+        allContentfulBlog (
+            sort: { fields: createdAt, order: DESC }
+            filter: {
+                node_locale: { eq: "en-US" }
+                category: {elemMatch: {title: {eq: "Worst new music"}}}
+            },)
+        {
+            edges {
+                node {
+                    id
+                    slug
+                }
+            }
+        }
+    }
+    `
+    ).then(result => {
+        const blogs = result.data.allContentfulBlog.edges
+        // Articles per page that will be shown
+        const blogsPerPage = 6
+        const numPages = Math.ceil(blogs.length / blogsPerPage)
+
+        Array.from({
+            length: numPages
+        }).forEach((_, i) => {
+            createPage({
+                path:
+                    i === 0
+                        ? `/category/worst-new-music`
+                        : `/category/worst-new-music/${i + 1}`,
+                component: path.resolve('./src/templates/worst-new-music.js'),
+                context: {
+                    limit: blogsPerPage,
+                    skip: i * blogsPerPage,
+                    numPages,
+                    currentPage: i + 1
+                }
+            })
+        })
+    })
+
+    // Create the "OPINION" filtered page
+    const getOpinion = makeRequest(
+        graphql,
+        `
+    {
+        allContentfulBlog (
+            sort: { fields: createdAt, order: DESC }
+            filter: {
+                node_locale: { eq: "en-US" }
+                category: {elemMatch: {title: {eq: "Opinion"}}}
+            },)
+        {
+            edges {
+                node {
+                    id
+                    slug
+                }
+            }
+        }
+    }
+    `
+    ).then(result => {
+        const blogs = result.data.allContentfulBlog.edges
+        // Articles per page that will be shown
+        const blogsPerPage = 6
+        const numPages = Math.ceil(blogs.length / blogsPerPage)
+
+        Array.from({
+            length: numPages
+        }).forEach((_, i) => {
+            createPage({
+                path:
+                    i === 0
+                        ? `/category/opinion`
+                        : `/category/opinion/${i + 1}`,
+                component: path.resolve('./src/templates/opinion.js'),
+                context: {
+                    limit: blogsPerPage,
+                    skip: i * blogsPerPage,
+                    numPages,
+                    currentPage: i + 1
+                }
+            })
+        })
+    })
+
+    // Create the "OPINION" filtered page
+    const getReviews = makeRequest(
+        graphql,
+        `
+    {
+        allContentfulBlog (
+            sort: { fields: createdAt, order: DESC }
+            filter: {
+                node_locale: { eq: "en-US" }
+                category: {elemMatch: {title: {eq: "Reviews"}}}
+            },)
+        {
+            edges {
+                node {
+                    id
+                    slug
+                }
+            }
+        }
+    }
+    `
+    ).then(result => {
+        const blogs = result.data.allContentfulBlog.edges
+        // Articles per page that will be shown
+        const blogsPerPage = 6
+        const numPages = Math.ceil(blogs.length / blogsPerPage)
+
+        Array.from({
+            length: numPages
+        }).forEach((_, i) => {
+            createPage({
+                path:
+                    i === 0
+                        ? `/category/reviews`
+                        : `/category/reviews/${i + 1}`,
+                component: path.resolve('./src/templates/reviews.js'),
+                context: {
+                    limit: blogsPerPage,
+                    skip: i * blogsPerPage,
+                    numPages,
+                    currentPage: i + 1
+                }
+            })
+        })
+    })
+
+    return Promise.all([
+        getBlog,
+        getArchive,
+        getStaffsRejects,
+        getWallOfShame,
+        getWorstNewMusic,
+        getOpinion,
+        getReviews
+    ])
 }

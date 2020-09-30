@@ -13,7 +13,7 @@ import SEO from '../components/seo'
 // The css for this page is on _dumpster.scss
 import headerImg from '../images/galaxy.png'
 
-class StaffsRejects extends Component {
+class Opinion extends Component {
     constructor(props) {
         super(props)
         this.props = this.data
@@ -46,14 +46,14 @@ class StaffsRejects extends Component {
         const isLast = currentPage === numPages
         const prevPage =
             currentPage - 1 === 1
-                ? '/category/staffs-rejects'
-                : `/category/staffs-rejects/${currentPage - 1}`
-        const nextPage = `/category/staffs-rejects/${currentPage + 1} `
+                ? '/category/opinion'
+                : `/category/opinion/${currentPage - 1}`
+        const nextPage = `/category/opinion/${currentPage + 1} `
 
         return (
             <Layout>
                 <SEO
-                    title="Forkked blog staff's rejects"
+                    title="Forkked blog opinion"
                     keywords={[
                         'blog',
                         'forkked articles',
@@ -61,7 +61,7 @@ class StaffsRejects extends Component {
                         'reviews',
                         'posts',
                         'blog posts',
-                        'staff rejects',
+                        'opinion',
                         'music',
                         'pop'
                     ]}
@@ -197,7 +197,7 @@ class StaffsRejects extends Component {
     }
 }
 
-export default StaffsRejects
+export default Opinion
 
 /**
  * The "skip" and "limit" on the graphql is to parse the skip and limit values previously
@@ -206,12 +206,12 @@ export default StaffsRejects
  */
 
 export const pageQuery = graphql`
-    query StaffsRejectsQuery($skip: Int!, $limit: Int!) {
+    query OpinionQuery($skip: Int!, $limit: Int!) {
         allContentfulBlog(
             sort: { fields: [createdAt], order: DESC }
             filter: {
                 node_locale: { eq: "en-US" }
-                category: { elemMatch: { title: { eq: "Staff's rejects" } } }
+                category: { elemMatch: { title: { eq: "Opinion" } } }
             }
             skip: $skip
             limit: $limit
