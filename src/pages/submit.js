@@ -1,5 +1,5 @@
-import React, { Component } from "react"
-import SEO from "../components/seo"
+import React, { Component } from 'react'
+import SEO from '../components/seo'
 import '../sass/main.scss'
 
 // Import components
@@ -7,6 +7,8 @@ import Layout from '../components/layout'
 import Nav from '../components/header/nav'
 import SideDrawer from '../components/header/side-drawer'
 import Backdrop from '../components/header/backdrop'
+import headerImg from '../images/galaxy.png'
+import ContactForm from '../components/ContactForm'
 import FooterWeb from '../components/footer/footer-web'
 
 class Submit extends Component {
@@ -29,16 +31,56 @@ class Submit extends Component {
         this.setState({ sideDrawerOpen: false })
     }
 
-        render() {
-                    let backdrop
+    render() {
+        let backdrop
 
-                    if (this.state.sideDrawerOpen) {
-                        backdrop = (
-                            <Backdrop click={this.backdropClickHandler} />
-                        )
-                    }
-                            return (
-                                
-                            )
+        if (this.state.sideDrawerOpen) {
+            backdrop = <Backdrop click={this.backdropClickHandler} />
         }
+
+        return (
+            <Layout>
+                <SEO
+                    title="Forkked submit music request"
+                    keywords={[
+                        'blog',
+                        'forkked articles',
+                        'articles',
+                        'reviews',
+                        'posts',
+                        'blog posts',
+                        'reviews',
+                        'music',
+                        'pop',
+                        'requests'
+                    ]}
+                />
+                <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.sideDrawerOpen} />
+                {backdrop}
+                <header>
+                    <div className="submit__header">
+                        <div
+                            className="submit__hero"
+                            style={{ backgroundImage: `url(${headerImg})` }}
+                        ></div>
+                    </div>
+                </header>
+                <div className="submit__section">
+                    <div className="submit__form">
+                        <h1>
+                            Want a specific song, artist or album reviewed?
+                            Submit your request here and we will do it!
+                        </h1>
+                        <div className="inner">
+                            <ContactForm />
+                        </div>
+                    </div>
+                </div>
+                <FooterWeb />
+            </Layout>
+        )
+    }
 }
+
+export default Submit
