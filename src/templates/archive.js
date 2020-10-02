@@ -187,8 +187,8 @@ class ArchiveTemplate extends Component {
                             </Link>
                         )}
                     </div>
+                    <FooterWeb />
                 </div>
-                <FooterWeb />
             </Layout>
         )
     }
