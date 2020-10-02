@@ -8,6 +8,7 @@ import Layout from '../components/layout'
 import Nav from '../components/header/nav'
 import SideDrawer from '../components/header/side-drawer'
 import Backdrop from '../components/header/backdrop'
+import FooterWeb from '../components/footer/footer-web'
 import SEO from '../components/seo'
 
 // The css for this page is on _dumpster.scss
@@ -192,6 +193,7 @@ class Opinion extends Component {
                         )}
                     </div>
                 </div>
+                <FooterWeb />
             </Layout>
         )
     }
