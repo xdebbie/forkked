@@ -34,7 +34,8 @@ $  CONTACT FORM
 
 .submit__section {
     max-width: 1000px;
-    margin: 20rem auto;
+    padding-top: 18rem;
+    margin: 0 auto;
 
     .submit__form {
         h1 {
@@ -42,20 +43,39 @@ $  CONTACT FORM
             color: colour(white);
             font-size: 2rem;
             font-weight: normal;
+            line-height: 4rem;
+            text-align: center;
+            margin: 0 auto;
+            max-width: 500px;
         }
 
-        .form {
-            font-family: font(geogrotesque);
-            color: colour(white);
-            font-size: 2rem;
-            width: 100%;
+        .inner {
+            margin: 2rem auto;
 
-            #name {
-            }
+            .form {
+                font-family: font(geogrotesque);
+                color: colour(white);
+                font-size: 2rem;
+                width: 100%;
 
-            label {
-                font-size: 2.5rem;
-                text-transform: uppercase;
+                label {
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 3rem auto 1rem auto;
+                    text-align: center;
+                }
+
+                textarea,
+                input {
+                    width: 30rem;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 auto;
+                    text-align: center;
+                    background-color: silver;
+                }
             }
         }
     }

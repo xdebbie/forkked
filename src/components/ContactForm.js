@@ -88,7 +88,11 @@ export default () => {
                     required
                     value={inputs.message}
                 />
-                <button type="submit" disabled={status.submitting}>
+                <button
+                    className="btn__more"
+                    type="submit"
+                    disabled={status.submitting}
+                >
                     {!status.submitting
                         ? !status.submitted
                             ? 'Submit'

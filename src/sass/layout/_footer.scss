@@ -20,10 +20,8 @@ $  FOOTER
 
     // footer hero of all pages except for the home page
     .footer__web--hero {
-        bottom: 0;
         height: 21em;
         transform: translateY(0);
-        z-index: 0;
     }
 
     .nav__footer--home,
@@ -49,8 +47,7 @@ $  FOOTER
 
     // footer of all pages except for the home page
     .nav__footer--web {
-        bottom: 0;
-        transform: translateY(0);
+        transform: translateY(8em);
         background: linear-gradient(
             to top,
             rgba(10, 10, 10, 0.2) 0%,

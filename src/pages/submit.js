@@ -39,46 +39,53 @@ class Submit extends Component {
         }
 
         return (
-            <Layout>
-                <SEO
-                    title="Forkked submit music request"
-                    keywords={[
-                        'blog',
-                        'forkked articles',
-                        'articles',
-                        'reviews',
-                        'posts',
-                        'blog posts',
-                        'reviews',
-                        'music',
-                        'pop',
-                        'requests'
-                    ]}
-                />
-                <Nav drawerClickHandler={this.drawerToggleClickHandler} />
-                <SideDrawer show={this.state.sideDrawerOpen} />
-                {backdrop}
-                <header>
-                    <div className="submit__header">
-                        <div
-                            className="submit__hero"
-                            style={{ backgroundImage: `url(${headerImg})` }}
-                        ></div>
-                    </div>
-                </header>
-                <div className="submit__section">
-                    <div className="submit__form">
-                        <h1>
-                            Want a specific song, artist or album reviewed?
-                            Submit your request here and we will do it!
-                        </h1>
-                        <div className="inner">
-                            <ContactForm />
+            <div className="wrapper">
+                <Layout>
+                    <SEO
+                        title="Forkked submit music request"
+                        keywords={[
+                            'blog',
+                            'forkked articles',
+                            'articles',
+                            'reviews',
+                            'posts',
+                            'blog posts',
+                            'reviews',
+                            'music',
+                            'pop',
+                            'requests'
+                        ]}
+                    />
+                    <Nav drawerClickHandler={this.drawerToggleClickHandler} />
+                    <SideDrawer show={this.state.sideDrawerOpen} />
+                    {backdrop}
+                    <div className="page">
+                        <header>
+                            <div className="submit__header">
+                                <div
+                                    className="submit__hero"
+                                    style={{
+                                        backgroundImage: `url(${headerImg})`
+                                    }}
+                                ></div>
+                            </div>
+                        </header>
+                        <div className="submit__section">
+                            <div className="submit__form">
+                                <h1>
+                                    Do you want a specific song, artist or album
+                                    reviewed? Submit your request here and we
+                                    will make it happen!
+                                </h1>
+                                <div className="inner">
+                                    <ContactForm />
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <FooterWeb />
-            </Layout>
+                    <FooterWeb />
+                </Layout>
+            </div>
         )
     }
 }
