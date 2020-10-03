@@ -55,7 +55,7 @@ class Reviews extends Component {
             <div className="wrapper">
                 <Layout>
                     <SEO
-                        title="Forkked blog reviews"
+                        title="Reviews"
                         keywords={[
                             'blog',
                             'forkked articles',

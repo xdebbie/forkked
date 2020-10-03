@@ -55,7 +55,7 @@ class StaffsRejects extends Component {
             <div className="wrapper">
                 <Layout>
                     <SEO
-                        title="Forkked blog staff's rejects"
+                        title="Staff's rejects"
                         keywords={[
                             'blog',
                             'forkked articles',

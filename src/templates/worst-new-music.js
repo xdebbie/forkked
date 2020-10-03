@@ -56,7 +56,7 @@ class WorstNewMusic extends Component {
             <div className="wrapper">
                 <Layout>
                     <SEO
-                        title="Forkked blog worst new music"
+                        title="Worst new music"
                         keywords={[
                             'blog',
                             'forkked articles',

@@ -42,7 +42,7 @@ class Submit extends Component {
             <div className="wrapper">
                 <Layout>
                     <SEO
-                        title="Forkked submit music request"
+                        title="Submit your request"
                         keywords={[
                             'blog',
                             'forkked articles',

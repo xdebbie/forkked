@@ -56,7 +56,7 @@ class WallOfShame extends Component {
             <div className="wrapper">
                 <Layout>
                     <SEO
-                        title="Forkked blog wall of shame"
+                        title="Wall of shame"
                         keywords={[
                             'blog',
                             'forkked articles',

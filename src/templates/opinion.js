@@ -55,7 +55,7 @@ class Opinion extends Component {
             <div className="wrapper">
                 <Layout>
                     <SEO
-                        title="Forkked blog opinion"
+                        title="Opinion"
                         keywords={[
                             'blog',
                             'forkked articles',
