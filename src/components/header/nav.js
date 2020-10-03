@@ -20,48 +20,26 @@ const Nav = props => (
             </a>
             <Link
                 className={
-                    // does the reviews page exists in this URL, if yes the active class is set, if not then no active class
-                    // REVIEWS
-                    window.location.href.indexOf('reviews') > 0
+                    // BLOG (DUMPSTER)
+                    window.location.href.indexOf('dumpster') > 0 ||
+                    window.location.href.indexOf('category') > 0
                         ? 'nav__item--link active'
                         : 'nav__item--link'
                 }
-                to="/reviews"
+                to="/dumpster"
             >
-                Reviews
+                Dumpster
             </Link>
             <Link
                 className={
                     // WORST NEW MUSIC
-                    window.location.href.indexOf('worst-new-music') > 0
+                    window.location.href.indexOf('playlists') > 0
                         ? 'nav__item--link active'
                         : 'nav__item--link'
                 }
-                to="/worst-new-music"
+                to="/playlists"
             >
-                Worst new music
-            </Link>
-            <Link
-                className={
-                    // STAFF'S REJECTS
-                    window.location.href.indexOf('staffs-rejects') > 0
-                        ? 'nav__item--link active'
-                        : 'nav__item--link'
-                }
-                to="/staffs-rejects"
-            >
-                Staff's rejects
-            </Link>
-            <Link
-                className={
-                    // WALL OF SHAME
-                    window.location.href.indexOf('wall-of-shame') > 0
-                        ? 'nav__item--link active'
-                        : 'nav__item--link'
-                }
-                to="/wall-of-shame"
-            >
-                Wall of shame
+                Playlists
             </Link>
             <Link
                 className={
@@ -76,15 +54,14 @@ const Nav = props => (
             </Link>
             <Link
                 className={
-                    // BLOG (DUMPSTER)
-                    window.location.href.indexOf('dumpster') > 0 ||
-                    window.location.href.indexOf('category') > 0
+                    // WALL OF SHAME
+                    window.location.href.indexOf('submit') > 0
                         ? 'nav__item--link active'
                         : 'nav__item--link'
                 }
-                to="/dumpster"
+                to="/submit"
             >
-                Dumpster
+                Submit a request
             </Link>
         </div>
     </nav>

@@ -43,7 +43,7 @@ const SideDrawer = props => {
                     <a href="/">Staff's rejects</a>
                 </li>
                 <li>
-                    <a href="/">Wall of shame</a>
+                    <a href="/submit">Submit a request</a>
                 </li>
                 <li>
                     <a href="/">Rankings</a>
@@ -52,7 +52,7 @@ const SideDrawer = props => {
                     <a href="/">Playlists</a>
                 </li>
                 <li>
-                    <a href="/">Dumpster</a>
+                    <a href="/dumpster">Dumpster</a>
                 </li>
             </ul>
             <hr />
