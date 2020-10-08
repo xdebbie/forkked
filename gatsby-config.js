@@ -173,7 +173,6 @@ module.exports = {
                 // normalizer function below.
                 // Default: all fields
                 index: [
-                    'id',
                     'artwork',
                     'score',
                     'artist',
@@ -191,6 +190,7 @@ module.exports = {
                 // the keys are taken from the normalizer function below.
                 // Default: all fields
                 store: [
+                    'id',
                     'artwork',
                     'score',
                     'artist',
@@ -208,13 +208,12 @@ module.exports = {
                 // field above (default: 'id'). This is required.
                 normalizer: ({ data }) =>
                     data.allMongodbAlbumsPitchfork.nodes.map(node => ({
+                        id: node.id,
                         artwork: node.artwork,
                         artist: node.artist,
                         album: node.album,
                         label: node.label,
                         year: node.year,
-                        genre: node.genre,
-                        pubdate: node.pubdate,
                         url: node.url
                     }))
             }
@@ -225,3 +224,110 @@ module.exports = {
         // `gatsby-plugin-offline`,
     ]
 }
+
+/**
+ *         {
+            resolve: 'gatsby-plugin-local-search',
+            options: {
+                // A unique name for the search index. This should be descriptive of
+                // what the index contains. This is required.
+                name: 'scores',
+
+                // Set the search engine to create the index. This is required.
+                // The following engines are supported: flexsearch, lunr
+                engine: 'flexsearch',
+
+                // Provide options to the engine. This is optional and only recommended
+                // for advanced users.
+                //
+                // Note: Only the flexsearch engine supports options.
+                engineOptions: 'speed',
+
+                // GraphQL query used to fetch all data for the search index. This is
+                // required.
+                query: `
+          {
+            allMongodbAlbumsPitchfork {
+              totalCount
+              edges {
+                node {
+                    album
+                    artist
+                    artwork
+                    genre
+                    id
+                    label
+                    mongodb_id
+                    pubdate
+                    score
+                    title
+                    url
+                    year
+                }
+              }
+            }
+          }
+        `,
+
+                // Field used as the reference value for each document.
+                // Default: 'id'.
+                ref: 'id',
+
+                // List of keys to index. The values of the keys are taken from the
+                // normalizer function below.
+                // Default: all fields
+                index: [
+                    'id',
+                    'album',
+                    'artist',
+                    'artwork',
+                    'genre',
+                    'label',
+                    'mongodb_id',
+                    'pubdate',
+                    'score',
+                    'title',
+                    'url',
+                    'year'
+                ],
+
+                // List of keys to store and make available in your UI. The values of
+                // the keys are taken from the normalizer function below.
+                // Default: all fields
+                store: [
+                    'id',
+                    'album',
+                    'artist',
+                    'artwork',
+                    'genre',
+                    'label',
+                    'mongodb_id',
+                    'pubdate',
+                    'score',
+                    'title',
+                    'url',
+                    'year'
+                ],
+
+                // Function used to map the result from the GraphQL query. This should
+                // return an array of items to index in the form of flat objects
+                // containing properties to index. The objects must contain the `ref`
+                // field above (default: 'id'). This is required.
+                normalizer: ({ data }) =>
+                    data.allMongodbAlbumsPitchfork.edges.map(edge => ({
+                        id: edge.node.id,
+                        album: edge.node.album,
+                        artist: edge.node.artist,
+                        artwork: edge.node.artwork,
+                        genre: edge.node.genre,
+                        label: edge.node.label,
+                        mongodb_id: edge.node.mongodb_id,
+                        pubdate: edge.node.pubdate,
+                        score: edge.node.score,
+                        title: edge.node.title,
+                        url: edge.node.url,
+                        year: edge.node.year
+                    }))
+            }
+        }
+ */

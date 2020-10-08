@@ -36,14 +36,19 @@ const SearchComponent = () => {
             {results &&
                 (results.length > 0 ? (
                     <ul className="search-component__results">
-                        {results.map(({ id, url, album }) => (
-                            <li key={id}>
-                                <Link to={url}>{album}</Link>
-                            </li>
-                        ))}
+                        {results.map(
+                            ({ id, url, album, artist, label, year }) => (
+                                <li key={id}>
+                                    <Link to={url}>{album}</Link>
+                                    <p>
+                                        {artist} - {label} - {year}
+                                    </p>
+                                </li>
+                            )
+                        )}
                     </ul>
                 ) : query !== '' ? (
-                    <p>No results</p>
+                    <p>This query has returned no results, please try again.</p>
                 ) : null)}
         </div>
     )
