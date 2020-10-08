@@ -145,7 +145,7 @@ module.exports = {
                 // required.
                 query: `
           {
-            allMongodbAlbumsPitchfork(limit:5000) {
+            allMongodbAlbumsPitchfork(limit:10000) {
               totalCount
               nodes {
                 id
