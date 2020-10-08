@@ -72,7 +72,7 @@ class Rankings extends Component {
                             </div>
                         </header>
                         <div className="rankings__feed">
-                            <p> Search engine test - try typing "Interscope"... </p>
+                            <p> Try typing "Interscope" </p>
                             <Search />
                         </div>
                     </div>

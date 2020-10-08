@@ -1,65 +1,87 @@
-.search-component {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto 4rem auto;
-    padding: 0;
-
-    .search-component__field input {
-        background-color: white;
-        width: 30rem;
-        font-family: font(geogrotesque);
-        padding: 0.5rem;
-        border: 1px solid purple;
-        border-radius: 0.5rem;
-        outline: none;
-        outline-color: yellow;
-    }
-
-    table {
-        margin: 0 auto;
-
-        th {
-            padding: 1rem 3rem;
-        }
-    }
-}
-
-.search-component__results tr {
-    padding: 4px;
-    width: 100%;
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    color: white;
-
-    a {
-        text-decoration: underline;
-        color: greenyellow;
-        font-size: 2rem;
-        cursor: pointer;
-        line-height: 2.5rem;
-    }
-
-    img {
-        max-width: 100px;
-        height: auto;
-    }
-}
-
-.rankings {
-    font-size: 2rem;
-    padding-top: 10rem;
-}
-
 .rankings__feed {
     font-size: 2rem;
     padding-top: 10rem;
     margin: 0 auto;
-    max-width: 1000px;
+    width: 1000px;
     text-align: center;
-}
 
-.artwork img {
-    max-width: 100px;
-    height: auto;
+    p {
+        font-family: font(myriad);
+        color: white;
+    }
+
+    .search-component {
+        position: relative;
+        margin: 0 auto 4rem auto;
+        padding: 0;
+
+        .search-component__field input {
+            background-color: white;
+            width: 30rem;
+            font-family: font(geogrotesque);
+            padding: 0.5rem;
+            border: 1px solid white;
+            border-radius: 0.5rem;
+            outline: none;
+            outline-color: white;
+            margin-bottom: 2rem;
+        }
+
+        .search-component__results {
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 20px;
+            padding: 1rem 0 2rem 0;
+            margin: 0 auto;
+
+            thead {
+                tr {
+                    height: 70px;
+                    width: 1000px;
+                    text-transform: uppercase;
+
+                    th {
+                        color: colour(white);
+                        opacity: 0.7;
+                        font-family: font(praktikal);
+                        font-size: 1.6rem;
+                        padding: 1rem 2.5rem;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    text-transform: uppercase;
+                    font-size: 1.7rem;
+                    color: white;
+                    font-family: font(myriad);
+
+                    td {
+                        padding: 0.4rem 0.9rem;
+                    }
+
+                    a {
+                        text-decoration: underline;
+                        color: greenyellow;
+                        font-size: 1.7rem;
+                        cursor: pointer;
+                        line-height: 2.5rem;
+                    }
+
+                    .artwork img {
+                        max-width: 100px;
+                        height: auto;
+                        border-radius: 10px;
+                    }
+
+                    .score {
+                        font-size: 2.5rem;
+                    }
+
+                    .pitchfork {
+                    }
+                }
+            }
+        }
+    }
 }

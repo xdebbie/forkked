@@ -69,7 +69,7 @@ const SearchComponent = () => {
                                                 alt="album artwork"
                                             />
                                         </td>
-                                        <td>{score}</td>
+                                        <td className="score    ">{score}</td>
                                         <td>{artist}</td>
                                         <td>{album}</td>
                                         <td>{label}</td>
