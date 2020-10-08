@@ -1,11 +1,13 @@
 .search-component {
     position: relative;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 4rem auto;
+    padding: 0;
 
     .search-component__field input {
         background-color: white;
         width: 30rem;
+        font-family: font(geogrotesque);
         padding: 0.5rem;
         border: 1px solid purple;
         border-radius: 0.5rem;

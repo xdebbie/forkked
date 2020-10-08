@@ -19,7 +19,7 @@ const SearchComponent = () => {
 
     const { index, store } = data.localSearchScores
 
-    const results = useFlexSearch(query, index, store, 10)
+    const results = useFlexSearch(query, index, store, 20)
 
     const handleChange = event => {
         setQuery(event.target.value)
