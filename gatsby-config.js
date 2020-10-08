@@ -214,7 +214,10 @@ module.exports = {
                         album: node.album,
                         label: node.label,
                         year: node.year,
-                        url: node.url
+                        url: node.url,
+                        score: node.score,
+                        genre: node.genre,
+                        pubdate: node.pubdate
                     }))
             }
         }

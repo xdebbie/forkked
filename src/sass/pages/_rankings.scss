@@ -1,21 +1,28 @@
 .search-component {
-    margin-top: 2rem;
     position: relative;
-    max-width: 300px;
+    max-width: 1000px;
     margin: 0 auto;
+
+    .search-component__field input {
+        background-color: white;
+        width: 30rem;
+        padding: 0.5rem;
+        border: 1px solid purple;
+        border-radius: 0.5rem;
+        outline: none;
+        outline-color: yellow;
+    }
+
+    table {
+        margin: 0 auto;
+
+        th {
+            padding: 1rem 3rem;
+        }
+    }
 }
 
-.search-component__field input {
-    background-color: white;
-    width: 30rem;
-    padding: 0.5rem;
-    border: 1px solid purple;
-    border-radius: 0.5rem;
-    outline: none;
-    outline-color: yellow;
-}
-
-.search-component__results li {
+.search-component__results tr {
     padding: 4px;
     width: 100%;
     list-style: none;
@@ -30,6 +37,11 @@
         cursor: pointer;
         line-height: 2.5rem;
     }
+
+    img {
+        max-width: 100px;
+        height: auto;
+    }
 }
 
 .rankings {
@@ -43,4 +55,9 @@
     margin: 0 auto;
     max-width: 1000px;
     text-align: center;
+}
+
+.artwork img {
+    max-width: 100px;
+    height: auto;
 }

@@ -35,18 +35,54 @@ const SearchComponent = () => {
             />
             {results &&
                 (results.length > 0 ? (
-                    <ul className="search-component__results">
+                    <table className="search-component__results">
+                        <thead>
+                            <tr>
+                                <th>Artwork</th>
+                                <th>Score</th>
+                                <th>Artist</th>
+                                <th>Album</th>
+                                <th>Label</th>
+                                <th>Year</th>
+                                <th>Genre</th>
+                                <th>Pitchfork's review</th>
+                            </tr>
+                        </thead>
                         {results.map(
-                            ({ id, url, album, artist, label, year }) => (
-                                <li key={id}>
-                                    <Link to={url}>{album}</Link>
-                                    <p>
-                                        {artist} - {label} - {year}
-                                    </p>
-                                </li>
+                            ({
+                                id,
+                                url,
+                                album,
+                                artist,
+                                label,
+                                year,
+                                artwork,
+                                score,
+                                genre,
+                                pubdate
+                            }) => (
+                                <tbody>
+                                    <tr key={id}>
+                                        <td className="artwork">
+                                            <img
+                                                src={artwork}
+                                                alt="album artwork"
+                                            />
+                                        </td>
+                                        <td>{score}</td>
+                                        <td>{artist}</td>
+                                        <td>{album}</td>
+                                        <td>{label}</td>
+                                        <td>{year}</td>
+                                        <td>{genre}</td>
+                                        <td>
+                                            <Link to={url}>{pubdate}</Link>
+                                        </td>
+                                    </tr>
+                                </tbody>
                             )
                         )}
-                    </ul>
+                    </table>
                 ) : query !== '' ? (
                     <p>This query has returned no results, please try again.</p>
                 ) : null)}
