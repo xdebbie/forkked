@@ -104,7 +104,122 @@ module.exports = {
                     }
                 ]
             }
+        },
+        {
+            resolve: 'gatsby-source-mongodb',
+            options: {
+                dbName: 'albums',
+                collection: 'pitchfork',
+                connectionString: `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@${process.env.MONGO_SERVER}.oupso.azure.mongodb.net/albums`,
+                extraParams: {
+                    replicaSet: 'Cluster0-shard-0',
+                    ssl: true,
+                    authSource: 'admin',
+                    retryWrites: true
+                },
+                preserveObjectIds: true,
+                clientOptions: {
+                    useNewUrlParser: true,
+                    useUnifiedTopology: true
+                }
+            }
+        },
+        {
+            resolve: 'gatsby-plugin-local-search',
+            options: {
+                // A unique name for the search index. This should be descriptive of
+                // what the index contains. This is required.
+                name: 'scores',
+
+                // Set the search engine to create the index. This is required.
+                // The following engines are supported: flexsearch, lunr
+                engine: 'flexsearch',
+
+                // Provide options to the engine. This is optional and only recommended
+                // for advanced users.
+                //
+                // Note: Only the flexsearch engine supports options.
+                engineOptions: 'speed',
+
+                // GraphQL query used to fetch all data for the search index. This is
+                // required.
+                query: `
+          {
+            allMongodbAlbumsPitchfork {
+              totalCount
+              nodes {
+                id
+                artwork
+                score
+                artist
+                album
+                label
+                year
+                genre
+                pubdate
+                url
+                title
+                mongodb_id
+              }
+            }
+          }
+        `,
+
+                // Field used as the reference value for each document.
+                // Default: 'id'.
+                ref: 'id',
+
+                // List of keys to index. The values of the keys are taken from the
+                // normalizer function below.
+                // Default: all fields
+                index: [
+                    'id',
+                    'artwork',
+                    'score',
+                    'artist',
+                    'album',
+                    'label',
+                    'year',
+                    'genre',
+                    'pubdate',
+                    'url',
+                    'title',
+                    'mongodb_id'
+                ],
+
+                // List of keys to store and make available in your UI. The values of
+                // the keys are taken from the normalizer function below.
+                // Default: all fields
+                store: [
+                    'artwork',
+                    'score',
+                    'artist',
+                    'album',
+                    'label',
+                    'year',
+                    'genre',
+                    'pubdate',
+                    'url'
+                ],
+
+                // Function used to map the result from the GraphQL query. This should
+                // return an array of items to index in the form of flat objects
+                // containing properties to index. The objects must contain the `ref`
+                // field above (default: 'id'). This is required.
+                normalizer: ({ data }) =>
+                    data.allMongodbAlbumsPitchfork.nodes.map(node => ({
+                        artwork: node.artwork,
+                        artist: node.artist,
+                        album: node.album,
+                        label: node.label,
+                        year: node.year,
+                        genre: node.genre,
+                        pubdate: node.pubdate,
+                        url: node.url
+                    }))
+            }
         }
+        // Local search plugin
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,

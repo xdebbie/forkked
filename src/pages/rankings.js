@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+
 import SEO from '../components/seo'
 import '../sass/main.scss'
 
@@ -8,7 +9,7 @@ import Nav from '../components/header/nav'
 import SideDrawer from '../components/header/side-drawer'
 import Backdrop from '../components/header/backdrop'
 import headerImg from '../images/galaxy.png'
-
+import Search from '../components/search'
 import FooterWeb from '../components/footer/footer-web'
 
 class Rankings extends Component {
@@ -70,6 +71,10 @@ class Rankings extends Component {
                                 ></div>
                             </div>
                         </header>
+                        <div className="rankings__feed">
+                            <p> Search engine test </p>
+                            <Search />
+                        </div>
                     </div>
                     <FooterWeb />
                 </Layout>

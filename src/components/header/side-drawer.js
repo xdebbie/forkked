@@ -34,25 +34,16 @@ const SideDrawer = props => {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/">Reviews</a>
+                    <a href="/dumpster">Dumpster</a>
                 </li>
                 <li>
-                    <a href="/">Worst new music</a>
+                    <a href="/playlists">Playlists</a>
                 </li>
                 <li>
-                    <a href="/">Staff's rejects</a>
+                    <a href="/rankings">Rankings</a>
                 </li>
                 <li>
                     <a href="/submit">Submit a request</a>
-                </li>
-                <li>
-                    <a href="/">Rankings</a>
-                </li>
-                <li>
-                    <a href="/">Playlists</a>
-                </li>
-                <li>
-                    <a href="/dumpster">Dumpster</a>
                 </li>
             </ul>
             <hr />

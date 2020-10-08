@@ -1,0 +1,34 @@
+.search-component {
+    margin-top: 2rem;
+    position: relative;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.search-component__field input {
+    background-color: white;
+    width: 30rem;
+    padding: 0.5rem;
+    border: 1px solid purple;
+    border-radius: 0.5rem;
+    outline: none;
+    outline-color: yellow;
+}
+
+.search-component__results li {
+    padding: 4px;
+    width: 100%;
+}
+
+.rankings {
+    font-size: 2rem;
+    padding-top: 10rem;
+}
+
+.rankings__feed {
+    font-size: 2rem;
+    padding-top: 10rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: center;
+}
