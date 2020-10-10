@@ -2,7 +2,6 @@
     font-size: 2rem;
     padding-top: 10rem;
     margin: 0 auto;
-    width: 1000px;
     text-align: center;
 
     p {
@@ -28,15 +27,16 @@
         }
 
         .search-component__results {
-            background-color: rgba(0, 0, 0, 0.4);
+            max-width: 100rem;
+            background-color: rgba(32, 32, 32, 0.4);
             border-radius: 20px;
             padding: 1rem 0 2rem 0;
             margin: 0 auto;
+            border-spacing: 0rem;
 
             thead {
                 tr {
                     height: 70px;
-                    width: 1000px;
                     text-transform: uppercase;
 
                     th {
@@ -44,7 +44,7 @@
                         opacity: 0.7;
                         font-family: font(praktikal);
                         font-size: 1.6rem;
-                        padding: 1rem 2.5rem;
+                        padding: 1rem 1.5rem;
                     }
                 }
             }
@@ -57,7 +57,13 @@
                     font-family: font(myriad);
 
                     td {
-                        padding: 0.4rem 0.9rem;
+                        padding: 0.3rem 0.9rem;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+                        &:nth-of-type(1),
+                        &:last-of-type {
+                            border-bottom: transparent;
+                        }
                     }
 
                     a {

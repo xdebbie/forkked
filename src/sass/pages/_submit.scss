@@ -38,6 +38,13 @@ $  CONTACT FORM
     margin: 0 auto;
 
     .submit__form {
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+        max-width: 55rem;
+        margin: 0 auto 7rem auto;
+        padding-bottom: 0.1rem;
+        padding-top: 1rem;
+
         h1 {
             font-family: font(myriad);
             color: colour(white);
@@ -47,6 +54,7 @@ $  CONTACT FORM
             text-align: center;
             margin: 0 auto;
             max-width: 500px;
+            padding: 2rem 0;
         }
 
         .inner {
@@ -70,11 +78,12 @@ $  CONTACT FORM
                 textarea,
                 input {
                     width: 30rem;
+                    border-radius: 10px;
                     display: flex;
                     flex-direction: column;
                     margin: 0 auto;
                     text-align: center;
-                    background-color: silver;
+                    background-color: rgba(255, 255, 255, 0.7);
                 }
             }
         }
