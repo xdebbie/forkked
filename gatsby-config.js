@@ -18,6 +18,17 @@ module.exports = {
         },
         `gatsby-transformer-sharp`,
         `gatsby-transformer-remark`,
+        {
+            resolve: `gatsby-remark-embedder`,
+            options: {
+                customTransformers: [
+                    // Your custom transformers
+                ],
+                services: {
+                    // The service-specific options by the name of the service
+                }
+            }
+        },
         `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-plugin-manifest`,

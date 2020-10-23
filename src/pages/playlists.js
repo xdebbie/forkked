@@ -70,6 +70,14 @@ class Playlists extends Component {
                                 ></div>
                             </div>
                         </header>
+                        <iframe
+                            src="https://open.spotify.com/playlist/37i9dQZF1DX4eRPd9frC1m"
+                            width="500"
+                            height="800"
+                            frameBorder="0"
+                            allowtransparency="true"
+                            allow="encrypted-media"
+                        ></iframe>
                     </div>
                     <FooterWeb />
                 </Layout>
