@@ -34,12 +34,12 @@
         display: flex;
         min-height: 20em;
         padding: 6em 0 0 0;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: flex-end;
         margin-bottom: 6em;
 
         @include desktop {
-            padding: 6em 22% 0 22%;
+            padding: 0 14rem;
             justify-content: space-evenly;
         }
     }
