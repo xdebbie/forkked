@@ -8,6 +8,7 @@ import Nav from '../components/header/nav'
 import SideDrawer from '../components/header/side-drawer'
 import Backdrop from '../components/header/backdrop'
 import headerImg from '../images/galaxy.png'
+import Comments from '../components/disqus'
 
 import FooterWeb from '../components/footer/footer-web'
 
@@ -91,6 +92,7 @@ class Playlists extends Component {
                             ></iframe>
                         </div>
                     </div>
+                    <Comments />
                     <FooterWeb />
                 </Layout>
             </div>

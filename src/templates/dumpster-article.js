@@ -12,6 +12,7 @@ import FooterWeb from '../components/footer/footer-web'
 import Tidal from '../assets/tidal.svg'
 import Apple from '../assets/applemusic.svg'
 import Spotify from '../assets/spotify.svg'
+import Comments from '../components/disqus'
 
 /** A NOTE ON THE CATEGORY QUERY
  * Category is an array, so on GraphQL it's queried nested just like
@@ -136,6 +137,7 @@ class DumpsterTemplate extends Component {
                             </a>
                         </div>
                     </div>
+                    <Comments />
                     <FooterWeb />
                 </div>
             </Layout>

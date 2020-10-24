@@ -231,6 +231,12 @@ module.exports = {
                         pubdate: node.pubdate
                     }))
             }
+        },
+        {
+            resolve: `gatsby-plugin-disqus`,
+            options: {
+                shortname: `forkked`
+            }
         }
         // Local search plugin
         // this (optional) plugin enables Progressive Web App + Offline functionality

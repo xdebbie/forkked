@@ -26,3 +26,34 @@
         }
     }
 }
+
+.comments {
+    width: 84em;
+    color: white;
+    padding: 5px 10px;
+    margin: 5rem auto 2rem auto;
+
+    &:hover {
+        border-radius: 20px;
+
+        & h2 {
+        }
+    }
+
+    & h2 {
+        margin-bottom: 0;
+        font-weight: bold;
+    }
+
+    & .Date {
+        opacity: 0.5;
+        font-weight: 600;
+    }
+
+    & .Excerpt {
+        line-height: 25px;
+    }
+
+    & p {
+    }
+}
