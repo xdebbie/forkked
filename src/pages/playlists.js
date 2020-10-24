@@ -70,30 +70,26 @@ class Playlists extends Component {
                                 ></div>
                             </div>
                         </header>
-                        <iframe
-                            src="https://embed.tidal.com/albums/75413011"
-                            width="500"
-                            height="800"
-                            frameBorder="0"
-                            allowtransparency="true"
-                            allow="encrypted-media"
-                        ></iframe>
-                        <iframe
-                            src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4eRPd9frC1m"
-                            width="500"
-                            height="800"
-                            frameBorder="0"
-                            allowtransparency="true"
-                            allow="encrypted-media"
-                        ></iframe>
-                        <iframe
-                            src="https://embed.music.apple.com/us/playlist/ariana-grande-essentials/pl.942cc20e34a44f06bd36488e6c3e475e"
-                            width="500"
-                            height="800"
-                            frameBorder="0"
-                            allowtransparency="true"
-                            allow="encrypted-media"
-                        ></iframe>
+                        <div className="container">
+                            <iframe
+                                src="https://embed.tidal.com/albums/75413011"
+                                frameBorder="0"
+                                allowtransparency="true"
+                                allow="encrypted-media"
+                            ></iframe>
+                            <iframe
+                                src="https://embed.music.apple.com/us/playlist/ariana-grande-essentials/pl.942cc20e34a44f06bd36488e6c3e475e"
+                                frameBorder="0"
+                                allowtransparency="true"
+                                allow="encrypted-media"
+                            ></iframe>
+                            <iframe
+                                src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4eRPd9frC1m"
+                                frameBorder="0"
+                                allowtransparency="true"
+                                allow="encrypted-media"
+                            ></iframe>
+                        </div>
                     </div>
                     <FooterWeb />
                 </Layout>

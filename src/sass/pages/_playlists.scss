@@ -1,7 +1,28 @@
 .page {
-    header {
-    }
-    iframe {
-        margin-top: 10rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .container {
+        padding-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        justify-content: space-around;
+
+        @include desktop {
+            padding-top: 15rem;
+            flex-direction: row;
+        }
+
+        iframe {
+            margin: 0 auto;
+            width: 500px;
+            height: 400px;
+
+            @include desktop {
+                width: 310px;
+                height: 800px;
+            }
+        }
     }
 }
