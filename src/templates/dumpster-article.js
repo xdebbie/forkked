@@ -116,6 +116,8 @@ class DumpsterTemplate extends Component {
                                 href={
                                     this.props.data.contentfulBlog.streamTidal
                                 }
+                                rel="noopener noreferrer"
+                                target="_blank"
                             >
                                 <Tidal className="stream__icon" />
                             </a>
@@ -124,6 +126,8 @@ class DumpsterTemplate extends Component {
                                 href={
                                     this.props.data.contentfulBlog.streamApple
                                 }
+                                rel="noopener noreferrer"
+                                target="_blank"
                             >
                                 <Apple className="stream__icon" />
                             </a>
@@ -132,11 +136,14 @@ class DumpsterTemplate extends Component {
                                 href={
                                     this.props.data.contentfulBlog.streamSpotify
                                 }
+                                rel="noopener noreferrer"
+                                target="_blank"
                             >
                                 <Spotify className="stream__icon" />
                             </a>
                         </div>
                     </div>
+                    <hr />
                     <Comments />
                     <FooterWeb />
                 </div>

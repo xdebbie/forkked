@@ -54,3 +54,13 @@ body {
         min-height: calc(100vh - 21em);
     }
 }
+
+/**
+ * Basic styles for the comments box
+ */
+
+.comments {
+    max-width: 84em;
+    padding: 5px 10px;
+    margin: 2rem auto 2rem auto;
+}

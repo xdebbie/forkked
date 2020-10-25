@@ -6,7 +6,7 @@ const Comments = () => {
     return (
         <>
             <div className="comments">
-                <CommentCount config={disqusConfig} placeholder={'Counter'} />
+                {/* <CommentCount config={disqusConfig} placeholder={'Counter'} /> *}
                 {/* Post Contents */}
                 <Disqus config={disqusConfig} />
             </div>

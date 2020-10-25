@@ -91,16 +91,17 @@ $  DUMPSTER (ARTICLE PAGE)
                 text-transform: uppercase;
                 font-weight: bold;
             }
-
-            hr {
-                display: block;
-                height: 1px;
-                border: 0;
-                border-top: 1px solid colour(cod-gray);
-                margin: 0.5em 0;
-                padding: 0;
-            }
         }
+    }
+
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid colour(cod-gray);
+        margin: 0.5em auto;
+        padding: 0;
+        max-width: 84em;
     }
 
     .dumpster__content {
@@ -109,7 +110,7 @@ $  DUMPSTER (ARTICLE PAGE)
         max-width: 84em;
 
         @include desktop {
-            margin: 6rem auto;
+            margin: 6rem auto 4rem auto;
         }
 
         p {
