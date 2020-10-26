@@ -5,3 +5,6 @@
  */
 
 // You can delete this file if you're not using it
+
+import LogRocket from 'logrocket'
+LogRocket.init('qnk3w3/forkked')
