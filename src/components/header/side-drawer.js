@@ -14,36 +14,31 @@ const SideDrawer = props => {
         drawerClasses = 'side__drawer open'
     }
     return (
-        <nav
-            className={drawerClasses}
-            style={{
-                backgroundImage: `linear-gradient(
-                to bottom, 
-                rgba(10, 10, 10, 0.6) 0%,
-                rgba(10, 10, 10, 0.57) 50%,
-                rgba(10, 10, 10, 0.44) 60%,
-                rgba(10, 10, 10, 0.28) 100%),
+        <nav className={drawerClasses}>
+            <div
+                className="side__logo"
+                style={{
+                    backgroundImage: `
                 url(${galaxy})`
-            }}
-        >
-            <div className="side__logo">
+                }}
+            >
                 <h1>Forkked</h1>
             </div>
             <ul className="side__items">
                 <li>
-                    <a href="/">Home</a>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
-                    <a href="/dumpster">Dumpster</a>
+                    <Link to="/dumpster">Dumpster</Link>
                 </li>
                 <li>
-                    <a href="/playlists">Playlists</a>
+                    <Link to="/playlists">Playlists</Link>
                 </li>
                 <li>
-                    <a href="/rankings">Rankings</a>
+                    <Link to="/rankings">Rankings</Link>
                 </li>
                 <li>
-                    <a href="/submit">Submit a request</a>
+                    <Link to="/submit">Submit a request</Link>
                 </li>
             </ul>
             <hr />
@@ -70,16 +65,16 @@ const SideDrawer = props => {
             <hr />
             <ul className="side__legal">
                 <li>
-                    <a href="/">Newsletter</a>
+                    <Link to="/">Newsletter</Link>
                 </li>
                 <li>
-                    <a href="/">Advertising</a>
+                    <Link to="/">Advertising</Link>
                 </li>
                 <li>
-                    <a href="/">Reprint/permissions</a>
+                    <Link to="/">Reprint/permissions</Link>
                 </li>
                 <li>
-                    <a href="/">Contact</a>
+                    <Link to="/">Contact</Link>
                 </li>
             </ul>
             <div className="side__disclaimer">

@@ -27,12 +27,14 @@ class IndexPage extends Component {
 
     backdropClickHandler = () => {
         this.setState({ sideDrawerOpen: false })
+        document.body.classList.remove('preventscroll')
     }
 
     render() {
         let backdrop
 
         if (this.state.sideDrawerOpen) {
+            document.body.classList.add('preventscroll')
             backdrop = <Backdrop click={this.backdropClickHandler} />
         }
 
