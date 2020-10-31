@@ -80,30 +80,40 @@ $  SIDE DRAWER (NAV)
             margin-right: 1rem;
 
             .side__social--icon {
-                height: 3.5rem;
+                height: 3rem;
                 stroke: colour(cod-gray);
                 transition: all 0.3s ease;
-                width: 3.5rem;
+                width: 3rem;
 
                 &:hover {
                     stroke: colour(shiraz);
                     transform: scale(1.2);
                     transition: all 0.3s ease;
                 }
+
+                @include tablet {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                }
             }
 
             .side__music--icon {
                 fill: colour(cod-gray);
-                height: 3.5rem;
+                height: 3rem;
                 stroke: colour(cod-gray);
                 transition: all 0.3s ease;
-                width: 3.5rem;
+                width: 3rem;
 
                 &:hover {
                     fill: colour(shiraz);
                     stroke: colour(shiraz);
                     transform: scale(1.2);
                     transition: all 0.3s ease;
+                }
+
+                @include tablet {
+                    width: 3.5rem;
+                    height: 3.5rem;
                 }
             }
         }

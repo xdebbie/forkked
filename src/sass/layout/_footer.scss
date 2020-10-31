@@ -7,7 +7,7 @@ $  FOOTER
         background-position: 0% 100%;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 67em;
+        height: 71em;
         left: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
@@ -16,12 +16,20 @@ $  FOOTER
         transform: translateY(-44em);
         width: 100vw;
         z-index: -1;
+
+        @include tablet {
+            height: 67em;
+        }
     }
 
     // footer hero of all pages except for the home page
     .footer__web--hero {
-        height: 21em;
+        height: 25em;
         transform: translateY(0);
+
+        @include tablet {
+            height: 21em;
+        }
     }
 
     .nav__footer--home,
@@ -29,7 +37,7 @@ $  FOOTER
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 21em;
+        height: 25em;
         left: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
@@ -43,6 +51,10 @@ $  FOOTER
             rgba(10, 10, 10, 0.7) 50%,
             rgba(10, 10, 10, 0.9) 100%
         );
+
+        @include tablet {
+            height: 21em;
+        }
     }
 
     // footer of all pages except for the home page
