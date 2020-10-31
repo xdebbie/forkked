@@ -68,10 +68,11 @@ $  FOOTER
             }
 
             .footer__item--link {
-                font-size: font-size(footer);
+                font-size: font-size(smaller);
                 color: colour(white);
                 font-family: font(myriad);
                 margin-right: 3rem;
+                margin-bottom: 1rem;
                 text-decoration: none;
                 text-transform: uppercase;
                 transition: all 0.3s ease;
@@ -83,6 +84,11 @@ $  FOOTER
                 &:hover {
                     color: colour(pastel);
                     transition: all 0.3s ease;
+                }
+
+                @include tablet {
+                    font-size: font-size(footer);
+                    margin-bottom: 0;
                 }
             }
         }

@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component } from 'react'
 import { Link } from 'gatsby'
 import SEO from '../components/seo'
 import '../sass/main.scss'
@@ -27,14 +27,12 @@ class IndexPage extends Component {
 
     backdropClickHandler = () => {
         this.setState({ sideDrawerOpen: false })
-        // document.body.classList.remove('preventscroll')
     }
 
     render() {
         let backdrop
 
         if (this.state.sideDrawerOpen) {
-            // document.body.classList.add('preventscroll')
             backdrop = <Backdrop click={this.backdropClickHandler} />
         }
 
