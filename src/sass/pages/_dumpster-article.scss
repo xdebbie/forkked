@@ -116,23 +116,28 @@ $  DUMPSTER (ARTICLE PAGE)
         p {
             color: colour(black);
             font-family: font(meta);
-            font-size: font-size(ptext-sm);
+            font-size: font-size(nav-link);
             font-weight: normal;
-            line-height: line-height(article);
+            line-height: line-height(mob);
             margin: 3.5rem 0;
 
-            @include desktop {
+            @include tablet {
                 font-size: font-size(ptext);
+                line-height: line-height(article);
             }
         }
 
         figcaption {
             font-family: font(myriad);
-            font-size: font-size(nav-link);
+            font-size: font-size(button);
             line-height: line-height(article);
             font-weight: normal;
             max-width: 80rem;
             margin: 0 auto;
+
+            @include tablet {
+                font-size: font-size(nav-link);
+            }
         }
 
         // first letter of the text block
@@ -165,9 +170,13 @@ $  DUMPSTER (ARTICLE PAGE)
 
         .stream__track {
             font-family: font(myriad);
-            font-size: font-size(subtitle-featured);
+            font-size: font-size(nav-link);
             line-height: line-height(article);
             text-transform: uppercase;
+
+            @include tablet {
+                font-size: font-size(subtitle-featured);
+            }
 
             span {
                 font-weight: bold;
@@ -178,10 +187,10 @@ $  DUMPSTER (ARTICLE PAGE)
         .stream__links {
             display: flex;
             flex-direction: column;
-            margin-top: 0.6rem;
 
             @include tablet {
                 flex-direction: row;
+                margin-top: 0.6rem;
             }
 
             .stream__icon {

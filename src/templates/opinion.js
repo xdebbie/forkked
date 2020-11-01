@@ -146,6 +146,19 @@ class Opinion extends Component {
                                         {' '}
                                         Reviews{' '}
                                     </Link>
+                                    <Link
+                                        to="/dumpster"
+                                        className={
+                                            window.location.href.indexOf(
+                                                'dumpster'
+                                            ) > 0
+                                                ? 'dumpster__nav--link selected'
+                                                : 'dumpster__nav--link'
+                                        }
+                                    >
+                                        {' '}
+                                        All{' '}
+                                    </Link>
                                 </div>
                             </div>
                         </header>

@@ -84,6 +84,12 @@
             margin-top: 1rem;
         }
     }
+
+    .selected {
+        color: colour(cod-gray);
+        background-color: colour(white);
+        border-radius: 5px;
+    }
 }
 
 .pagination {
@@ -109,7 +115,7 @@
                 height: 20px;
                 width: 20px;
                 opacity: 1;
-                border: 1px solid blueviolet;
+                border: 1px solid colour(white);
                 border-width: 4px 4px 0 0;
                 transform: rotate(45deg);
                 transition: all 0.3s ease;
@@ -129,7 +135,7 @@
                 height: 20px;
                 width: 20px;
                 opacity: 1;
-                border: 1px solid blueviolet;
+                border: 1px solid colour(white);
                 border-width: 4px 4px 0 0;
                 transform: rotate(225deg);
                 transition: all 0.3s ease;
