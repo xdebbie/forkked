@@ -35,10 +35,11 @@ $  CONTACT FORM
 .submit__section {
     max-width: 1000px;
     padding-top: 18rem;
+    padding: 14rem 2rem 0 2rem;
     margin: 0 auto;
 
     .submit__form {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.6);
         border-radius: 20px;
         max-width: 55rem;
         margin: 0 auto 7rem auto;
@@ -48,13 +49,17 @@ $  CONTACT FORM
         h1 {
             font-family: font(myriad);
             color: colour(white);
-            font-size: 2rem;
+            font-size: 1.6rem;
             font-weight: normal;
-            line-height: 4rem;
+            line-height: 3.5rem;
             text-align: center;
             margin: 0 auto;
             max-width: 500px;
-            padding: 2rem 0;
+            padding: 2rem 4rem;
+
+            @include tablet {
+              font-size: 2rem;
+            }
         }
 
         .inner {
@@ -67,12 +72,16 @@ $  CONTACT FORM
                 width: 100%;
 
                 label {
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     text-transform: uppercase;
                     display: flex;
                     flex-direction: column;
                     margin: 3rem auto 1rem auto;
                     text-align: center;
+
+                    @include tablet {
+                      font-size: 2.5rem;
+                    }
                 }
 
                 textarea,
@@ -83,7 +92,7 @@ $  CONTACT FORM
                     flex-direction: column;
                     margin: 0 auto;
                     text-align: center;
-                    background-color: rgba(255, 255, 255, 0.7);
+                    background-color: rgba(255, 255, 255, 0.8);
                 }
             }
         }

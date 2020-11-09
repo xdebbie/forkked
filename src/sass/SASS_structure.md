@@ -1,4 +1,4 @@
-<pre>css/
+<pre>sass/
 |
 |– abstracts/
 | |– \_functions.scss &nbsp; &nbsp; // Sass Functions
@@ -8,23 +8,28 @@
 |
 |– base/
 | |– \_base.scss &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Base
-| |– \_fonts.scss &nbsp; &nbsp; &nbsp; &nbsp; // Fonts
 | |– \_typography.scss &nbsp; &nbsp;// Typography
 |
 |– components/
+| |– \_backdrop.scss &nbsp; &nbsp; &nbsp; &nbsp;// Backdrop  
 | |– \_button.scss &nbsp; &nbsp; &nbsp; &nbsp;// Buttons  
-|
-|– fonts/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Font files
-|
-|– icons/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Font Awesome icons
+| |– \_drawer-toggle.scss &nbsp; &nbsp; &nbsp; &nbsp;// Drawer toggle
+| |– \_side-drawer.scss &nbsp; &nbsp; &nbsp; &nbsp;// Side drawer    
 |
 |– layout/
 | |– \_footer.scss &nbsp; &nbsp; &nbsp; &nbsp;// Footer
 | |– \_grid.scss &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Grid system
-| |– \_header.scss &nbsp; &nbsp; &nbsp; &nbsp;// Header
+| |– \_nav.scss &nbsp; &nbsp; &nbsp; &nbsp;// Nav menu
 |
 |– pages/
-| |– \_home.scss &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Home specific styles
+| |– home/ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;// Home styles
+| | |– \_cards.scss &nbsp; &nbsp; &nbsp; &nbsp;// Cards
+| | |– \_featured.scss &nbsp; &nbsp; &nbsp; &nbsp;// Featured article  
+| |– \_dumpster-article.scss &nbsp; &nbsp; &nbsp; &nbsp;// Blog article
+| |– \_dumpster.scss &nbsp; &nbsp; &nbsp; &nbsp;// Blog main page
+| |– \_playlists.scss &nbsp; &nbsp; &nbsp; &nbsp;// Playlists page
+| |– \_rankings.scss &nbsp; &nbsp; &nbsp; &nbsp;// Rankings page
+| |– \_submit.scss &nbsp; &nbsp; &nbsp; &nbsp;// Form page
 |
 |– vendors/
 | |– \_normalize.scss &nbsp; &nbsp; // Normalize
