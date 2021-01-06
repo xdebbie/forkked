@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "xdebbie <deh@live.in>",
   "dependencies": {
-    "axios": "^0.20.0",
+    "axios": "^0.21.1",
     "body-scroll-lock": "^3.1.5",
     "browser-monads": "^1.0.0",
     "dotenv": "^8.2.0",
