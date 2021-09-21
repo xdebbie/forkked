@@ -18,6 +18,25 @@ const makeRequest = (graphql, request) =>
         )
     })
 
+exports.sourceNodes = ({ actions }) => {
+    actions.createTypes(`
+        type mongodbAlbumsPitchfork implements Node @dontInfer {
+            id: JSON
+            artwork: JSON
+            score: JSON
+            artist: JSON
+            album: JSON
+            label: JSON
+            year: JSON
+            genre: JSON
+            pubdate: JSON
+            url: JSON
+            title: JSON
+            mongodb_id: JSON
+        }
+    `)
+}
+
 // Here we implement gatsby's API "createPages". this is called once the data layer is bootstrapped to let plugins create pages from data
 exports.createPages = ({ actions, graphql }) => {
     const { createPage } = actions

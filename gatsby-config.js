@@ -149,26 +149,26 @@ module.exports = {
                 // GraphQL query used to fetch all data for the search index. This is
                 // required.
                 query: `
-          {
-            allMongodbAlbumsPitchfork(limit:22000, sort: {fields: score, order: ASC}) {
-              totalCount
-              nodes {
-                id
-                artwork
-                score
-                artist
-                album
-                label
-                year
-                genre
-                pubdate
-                url
-                title
-                mongodb_id
-              }
-            }
-          }
-        `,
+                {
+                    allMongodbAlbumsPitchfork(limit:22000, sort: {fields: score, order: ASC}) {
+                    totalCount
+                    nodes {
+                        id
+                        artwork
+                        score
+                        artist
+                        album
+                        label
+                        year
+                        genre
+                        pubdate
+                        url
+                        title
+                        mongodb_id
+                    }
+                    }
+                }
+                `,
 
                 // Field used as the reference value for each document.
                 // Default: 'id'.
